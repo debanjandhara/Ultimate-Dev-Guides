@@ -1,10 +1,3 @@
-# Web-Dev-Roadmap
-index, react, node, django
--------------------------
-
-
-------------------
-
 **Title: Comprehensive Guide to HTML, CSS, and JavaScript**
 
 **Table of Contents:**

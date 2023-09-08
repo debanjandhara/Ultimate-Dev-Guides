@@ -534,4 +534,273 @@ print(1, "Hello", 3.14); // Output: 1 Hello 3.14
 - Sorts elements in ascending order (default)
 - sort(begin, end)
 
-### 2. std.
+### 2. std::reverse
+- Reverses the order of elements
+- reverse(begin, end)
+
+### 3. std::find
+- Searches for an element in a range
+- find(begin, end, value)
+
+### 4. std::count
+- Counts the occurrences of a value in a range
+- count(begin, end, value)
+
+### 5. std::accumulate
+- Sums the elements in a range (requires <numeric>)
+- accumulate(begin, end, initial_value)
+
+### 6. std::max_element
+- Finds the maximum element in a range
+- max_element(begin, end)
+
+### 7. std::min_element
+- Finds the minimum element in a range
+- min_element(begin, end)
+
+### 8. std::binary_search
+- Checks if a value exists in a sorted range
+- binary_search(begin, end, value)
+
+### 9. std::copy
+- Copies elements from one range to another
+- copy(begin, end, destination)
+
+### 10. std::transform
+- Applies a function to each element in a range
+- transform(begin, end, destination, function)
+
+## 📚 C++ Cheat Sheet - Miscellaneous
+
+### 1. C++ Coding Standards
+- Follow a consistent and readable coding style
+- Use meaningful names for variables, functions, and classes
+- Document your code with comments and explanations
+- Avoid using global variables whenever possible
+
+### 2. Memory Management
+- Be cautious with manual memory management (new/delete)
+- Prefer smart pointers for automatic memory management
+- Use RAII (Resource Acquisition Is Initialization) principles
+
+### 3. Exception Safety Guarantees
+- Strong Guarantee: Operations either succeed or leave the program unchanged
+- Basic Guarantee: Operations succeed or leave the object in a valid state
+- No-Throw Guarantee: Operations never throw exceptions
+
+### 4. Resource Management
+- Use RAII for managing resources like files, locks, etc.
+- Resource Allocation Is Initialization (RAII) ensures automatic cleanup
+
+### 5. Unit Testing (e.g., Catch2, Google Test)
+- Write tests to verify the correctness of your code
+- Test edge cases and typical scenarios to ensure robustness
+
+### 6. Debugging
+- Use a debugger (e.g., GDB) to inspect the program state
+- Output helpful debug messages to aid in identifying issues
+
+### 7. C++ Style Guides
+- Google C++ Style Guide
+- LLVM Coding Standards
+- Bjarne Stroustrup's C++ Style and Technique FAQ
+
+### 8. Further Learning Resources
+- C++ reference websites (cppreference, cplusplus)
+- C++ books (The C++ Programming Language by Bjarne Stroustrup)
+- Online C++ courses and tutorials (Coursera, Udemy, Pluralsight)
+
+### 9. Compiler Flags and Optimizations
+- -Wall: Enables most warning messages
+- -Werror: Treats warnings as errors
+- -O2: Enables optimization level 2 for better performance
+
+## 📚 C++ Cheat Sheet - Advanced Topics (Continued)
+
+### 1. C++ Standard Library Utility (Header: <utility>)
+- std::pair: Stores a pair of values (e.g., std::pair<int, int>)
+- std::make_pair: Creates a std::pair from two values
+- std::swap: Swaps the values of two variables or containers
+
+### 2. C++ Standard Library Function Objects (Header: <functional>)
+- std::function: Represents a callable object (function or functor)
+- std::bind: Binds arguments to a function or callable object
+- std::placeholders: Placeholders used with std::bind
+
+### 3. C++ Preprocessor Directives
+- #define: Creates a macro
+- #include: Includes a header file
+- #ifdef, #ifndef, #else, #endif: Conditional compilation
+
+### 4. Custom Iterators
+- Create your own iterators to traverse custom data structures
+
+### 5. C++ Standard Library Filesystem (C++17)
+- #include <filesystem>
+- std::filesystem::path: Represents a filesystem path
+- std::filesystem::exists, std::filesystem::create_directory, etc.
+
+## 📚 C++ Cheat Sheet - Multithreading and Concurrency (C++11 and beyond)
+
+### 1. std::thread
+- #include <thread>
+- std::thread my_thread(function, args);
+- my_thread.join(): Wait for the thread to finish
+- my_thread.detach(): Let the thread run independently
+
+### 2. std::mutex and std::lock_guard
+- #include <mutex>
+- std::mutex my_mutex;
+- std::lock_guard<std::mutex> my_lock(my_mutex);
+- Automatically releases the lock when the lock_guard goes out of scope
+
+### 3. std::unique_lock
+- Similar to std.lock_guard but with more flexibility
+- Allows lock and unlock at different places in the code
+
+### 4. std::condition_variable
+- #include <condition_variable>
+- std::condition_variable my_cv;
+- my_cv.wait(lock): Wait for a condition to be met
+- my_cv.notify_one() or my_cv.notify_all(): Notify waiting threads
+
+### 5. std::atomic (C++11)
+- #include <atomic>
+- std::atomic<int> my_atomic_var;
+-
+
+ Atomic operations without the need for mutex
+
+### 6. C++ Standard Library Thread-Local Storage (C++11)
+- thread_local keyword
+- Variables declared as thread_local are unique per thread
+
+## 📚 C++ Cheat Sheet - Object-Oriented Programming (OOP) Design Patterns [Continued]
+
+### 1. Creational Patterns
+- Singleton: Ensure only one instance of a class exists
+- Factory Method: Provides an interface for creating objects
+- Abstract Factory: Creates families of related objects
+- Builder: Constructs complex objects step by step
+- Prototype: Clone objects instead of creating new ones
+
+### 2. Structural Patterns
+- Adapter: Match interfaces of different classes
+- Decorator: Add new functionalities to objects dynamically
+- Proxy: Acts as an intermediary between the client and real object
+- Facade: Simplify complex systems by providing a unified interface
+- Composite: Treats individual objects and compositions uniformly
+
+### 3. Behavioral Patterns
+- Observer: Maintain a list of dependents and notify them of changes
+- Strategy: Define a family of algorithms and make them interchangeable
+- Command: Encapsulate a request as an object, allowing undo/redo
+- Template Method: Define the skeleton of an algorithm and let subclasses implement certain steps
+- State: Allow an object to change its behavior when its internal state changes
+
+### 4. Modern C++ Guidelines
+- Prefer RAII (Resource Acquisition Is Initialization)
+- Use const-correctness to prevent unintended modifications
+- Minimize the use of raw pointers; use smart pointers
+- Follow the Rule of Three/Five/Zero for resource management
+- Use move semantics for efficient resource transfers
+
+## 📚 C++ Cheat Sheet - More on Smart Pointers
+
+### 1. std::shared_ptr
+- Shared ownership smart pointer
+- Multiple shared_ptr can share ownership of the same resource
+- Resources are released when the last shared_ptr owning it is destroyed
+
+### 2. std::weak_ptr
+- Weak reference to an object owned by shared_ptr
+- Doesn't affect the reference count
+- Avoids circular reference problems between shared_ptr
+
+### 3. std::enable_shared_from_this
+- Interface to allow shared_ptr from *this in a member function
+- Must inherit from std::enable_shared_from_this<T>
+
+### 4. std::make_shared
+- Create a shared_ptr using make_shared for better performance and exception safety
+- std::make_shared<T>(args)
+
+### 5. C++ Smart Pointers Summary
+- Use std::unique_ptr when unique ownership is needed
+- Use std::shared_ptr when shared ownership is required
+- Use std::weak_ptr to break circular references
+- Avoid using raw pointers when possible to improve safety and maintainability
+
+### 6. C++ Concepts (C++20)
+- Concepts are predicates that describe the requirements of a template argument
+- Ensures that template parameters satisfy the required constraints
+- Improves error messages and code readability
+
+## 📚 C++ Cheat Sheet - C++23 Upcoming Features
+
+### 1. Concepts Improvements
+- Ranges-based Concepts
+- Ad hoc Constraints with requires expression
+- Constrained non-type template parameters
+
+### 2. Pattern Matching (Like switch)
+- Supports type patterns, variable binding, and guards
+- Simplifies pattern-based conditional logic
+
+### 3. Compile-Time Regular Expressions (CTRE)
+- Regular expressions evaluated at compile-time
+- Faster and more flexible than runtime regular expressions
+
+### 4. Lambdas Improvements
+- Lambdas in unevaluated contexts (e.g., type traits)
+- Function-local typedefs inside lambdas
+
+### 5. Co-Routines Enhancements
+- Co-routine final suspend point
+- Co-routine await and yield without co_await
+
+### 6. More Standard Library Additions
+- std::atomic_shared_ptr
+- std::range and std::contiguous_range
+- std::source_location
+- std::simd
+
+### 7. C++23 is a proposal, and features may change before final release. Stay updated!
+
+## 📚 C++ Cheat Sheet - Best Practices (Continued)
+
+### 1. Performance Considerations
+- Minimize unnecessary memory allocations and deallocations
+- Optimize hot code paths and avoid premature optimization
+- Prefer move semantics for large data structures
+
+### 2. Exception Handling
+- Use exceptions for exceptional situations only, not for regular control flow
+- Catch specific exception types, not just catch (...)
+
+### 3. Coding Style and Readability
+- Follow a consistent coding style and naming conventions
+- Use meaningful names for variables, functions, and classes
+- Avoid excessive use of macros and preprocessor directives
+
+### 4. C++ Standard Library
+- Utilize the powerful C++ Standard Library to avoid reinventing the wheel
+- Be familiar with standard algorithms, containers, and utilities
+
+### 5. Code Review and Testing
+- Review code regularly to catch bugs and ensure quality
+- Write unit tests and run them frequently to detect regressions
+
+### 6. Continuous Learning
+- Stay up-to-date with C++ features and best practices
+
+
+- Attend conferences, read books, and participate in the C++ community
+
+## 📚 C++ Cheat Sheet - Summary
+
+This comprehensive C++ cheat sheet covers a wide range of topics, from basic syntax to advanced features, design patterns, best practices, and upcoming C++23 features. It's a valuable resource for both beginners and experienced C++ programmers.
+
+Remember that C++ is a powerful and complex language, and mastering it takes time and practice. Continuously improve your skills, explore new features, and strive for clean and maintainable code. Happy coding!
+
+Feel free to ask if you have any more questions or need further clarification on any C++ topic!

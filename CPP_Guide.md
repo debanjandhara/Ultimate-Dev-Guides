@@ -1,6 +1,3 @@
-Certainly! Here's a beautifully formatted version of your README file with added emojis and necessary formatting:
-
-```markdown
 # 🚀 C++ Cheat Sheet - Roadmap Repository 🚀
 
 Welcome to the ultimate C++ cheat sheet! This repository contains comprehensive roadmaps and guides for mastering C++ and related topics in computer science and software development. Whether you're a beginner or an experienced developer, you'll find valuable information and resources to enhance your C++ skills.

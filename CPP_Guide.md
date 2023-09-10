@@ -487,9 +487,7 @@ print(1, "Hello", 3.14); // Output: 1 Hello 3.14
 ### 2. std::list
 - Doubly linked list
 - push_back(), push_front(), pop_back(), pop_front()
-- Insertion
-
- and deletion O(1)
+- Insertion and deletion O(1)
 
 ### 3. std::deque
 - Double-ended queue

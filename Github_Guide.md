@@ -1,4 +1,4 @@
-#🚀 GitHub and Git: A Comprehensive Guide 🚀
+# 🚀 GitHub and Git: A Comprehensive Guide 🚀
 
 Git and GitHub are essential tools for version control and collaborative development in the world of software development. This comprehensive guide will take you from the basics to expert-level concepts, empowering you to manage your code efficiently, collaborate effectively, and become a GitHub pro.
 

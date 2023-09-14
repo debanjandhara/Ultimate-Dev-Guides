@@ -1,4 +1,4 @@
-# Comprehensive Guide to HTML, CSS, and JavaScript 🚀
+# Comprehensive Guide to HTML, CSS, and JavaScript 🚀.
 
 📚 **Table of Contents:**
 

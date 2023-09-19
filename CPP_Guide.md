@@ -1,4 +1,4 @@
-# 🚀 C++ Cheat Sheet - Roadmap 🚀
+# 🚀 C++ Cheat Sheet - Roadmap  🚀
 
 Welcome to the ultimate C++ cheat sheet! This repository contains comprehensive roadmaps and guides for mastering C++ and related topics in computer science and software development. Whether you're a beginner or an experienced developer, you'll find valuable information and resources to enhance your C++ skills.
 

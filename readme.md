@@ -4,6 +4,37 @@ Welcome to the Roadmap Repository! This repository contains a collection of road
 
 ## Topics Covered
 
+### Coding (Folder) 
+cpp
+python
+javascript
+java
+
+
+### DS
+
+array, string, LL, stck, que, hashin,
+
+### Algo 
+
+Graph etc
+
+### Utils 
+
+Network, os, github
+
+
+### Javasripts
+
+react, node
+
+### Web Dev
+
+Basics
+
+
+### Libs
+
 - [Topic 1](link_to_topic_1)
 - [Topic 2](link_to_topic_2)
 - [Topic 3](link_to_topic_3)

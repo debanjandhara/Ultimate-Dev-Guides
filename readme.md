@@ -56,6 +56,10 @@ Basics
 - [Topic 2](link_to_topic_2)
 - [Topic 3](link_to_topic_3)
 
+### Software Design Patterns and Solutions 
+
+- [Python - MVC - Functions from other files - app.py/main.py - routes/api](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/CPP_Guide.md)
+
 ## How to Use
 
 1. Select the topic you're interested in from the list above.

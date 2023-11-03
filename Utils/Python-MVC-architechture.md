@@ -91,3 +91,6 @@ print(f"Debug: {debug}")
 ```
 
 Make sure to adjust the code to your specific use case, and ensure that the .env file is in the same directory as your script or provide the full path to the .env file if it's located elsewhere.
+
+
+Visit for folder wise divide, how to in python --> https://teclado.com/30-days-of-python/python-30-day-21-multiple-files/

@@ -4,6 +4,10 @@ To create a .env file, you can use a simple text editor. A .env file typically c
 KEY=VALUE
 ```
 
+```plaintext
+KEY = VALUE # Incorrect
+```
+
 Here are some guidelines for writing .env files:
 
 1. **Key-Value Pairs**: Each line should have a key and a corresponding value separated by an equals sign.

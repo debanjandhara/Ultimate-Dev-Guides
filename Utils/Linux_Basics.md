@@ -34,6 +34,9 @@ Here's a comprehensive guide on how to use the `screen` command in Ubuntu:
      screen -r session_name
      ```
 
+**3.1 Detaching from a screen:**
+   - To detach a screen, press `Ctrl` + `a`, and then `d`.
+
 **4. Creating and Navigating Windows:**
    - Inside a screen session, you can create multiple windows. To create a new window, press `Ctrl` + `a`, and then `c`.
    - To switch between windows, press `Ctrl` + `a`, and then `n` for the next window, or `Ctrl` + `a`, and then `p` for the previous window.

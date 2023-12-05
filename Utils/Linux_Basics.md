@@ -102,3 +102,57 @@ Yes, you can give custom names to your `screen` sessions. This makes it easier t
    To detach from a named session, use the `Ctrl` + `a`, and then `d` key combination as you would with any other `screen` session.
 
 By giving custom names to your `screen` sessions, you can easily manage and switch between them. It's particularly useful when you have multiple sessions running simultaneously.
+
+---------------------------------------------------------------------------
+
+Certainly! Below is a simple shell script that you can use to install the mentioned tools and perform an update and upgrade on an Ubuntu system. Please note that this script assumes a Debian-based system, such as Ubuntu, and it might require sudo privileges.
+
+```bash
+#!/bin/bash
+
+# Update and upgrade the system
+sudo apt update
+sudo apt upgrade -y
+
+# Install necessary tools and applications
+sudo apt install -y \
+    ubuntu-drivers \
+    docker.io \
+    git \
+    python3 \
+    python3-pip \
+    default-jdk \
+    nodejs \
+    npm
+
+# Install additional libraries and drivers
+sudo apt install -y \
+    build-essential \
+    dkms \
+    linux-headers-$(uname -r)
+
+# Install drivers using ubuntu-drivers
+sudo ubuntu-drivers install
+
+sudo usermod -aG docker $USER
+
+# Additional configuration or steps for Docker (if needed)
+# For example, adding the user to the docker group
+# sudo usermod -aG docker $USER
+
+echo "Installation complete!"
+```
+
+Save this script to a file, for example, `install_tools.sh`. Make it executable by running:
+
+```bash
+chmod +x install_tools.sh
+```
+
+Then, execute the script with:
+
+```bash
+./install_tools.sh
+```
+
+Please be cautious when running scripts from the internet, and review the script to ensure it meets your requirements. Additionally, consider following best practices for security, such as regularly updating packages and avoiding unnecessary installations.

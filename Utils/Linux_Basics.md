@@ -116,7 +116,7 @@ sudo apt upgrade -y
 
 # Install necessary tools and applications
 sudo apt install -y \
-    ubuntu-drivers \
+    ubuntu-drivers-common \
     docker.io \
     git \
     python3 \
@@ -134,6 +134,7 @@ sudo apt install -y \
 # Install drivers using ubuntu-drivers
 sudo ubuntu-drivers install
 
+sudo snap install docker
 sudo usermod -aG docker $USER
 
 # Additional configuration or steps for Docker (if needed)

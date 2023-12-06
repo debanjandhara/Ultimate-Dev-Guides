@@ -157,3 +157,120 @@ Then, execute the script with:
 ```
 
 Please be cautious when running scripts from the internet, and review the script to ensure it meets your requirements. Additionally, consider following best practices for security, such as regularly updating packages and avoiding unnecessary installations.
+
+---------------------------------------------------------------------------------
+
+To serve your Node.js app on port 80 and 443 on a Linux server, you can use a reverse proxy like Nginx. Here's a step-by-step guide:
+
+1. **Install Nginx:**
+   ```bash
+   sudo apt update
+   sudo apt install nginx
+   ```
+
+2. **Stop your Node.js app if it's running:**
+   ```bash
+   pm2 stop your_app_name  # or use your preferred process manager
+   ```
+
+3. **Configure Nginx:**
+   - Create a new configuration file for your app. For example, create a file named `your_app` in the `/etc/nginx/sites-available/` directory.
+     ```bash
+     sudo nano /etc/nginx/sites-available/your_app
+     ```
+
+   - Add the following configuration, replacing placeholders with your actual values:
+     ```nginx
+     server {
+         listen 80;
+         server_name your_domain_or_ip;
+
+         location / {
+             proxy_pass http://127.0.0.1:your_node_app_port;
+             proxy_http_version 1.1;
+             proxy_set_header Upgrade $http_upgrade;
+             proxy_set_header Connection 'upgrade';
+             proxy_set_header Host $host;
+             proxy_cache_bypass $http_upgrade;
+         }
+     }
+
+     server {
+         listen 443 ssl;
+         server_name your_domain_or_ip;
+
+         ssl_certificate /path/to/your/ssl_certificate.crt;
+         ssl_certificate_key /path/to/your/ssl_certificate_key.key;
+
+         location / {
+             proxy_pass http://127.0.0.1:your_node_app_port;
+             proxy_http_version 1.1;
+             proxy_set_header Upgrade $http_upgrade;
+             proxy_set_header Connection 'upgrade';
+             proxy_set_header Host $host;
+             proxy_cache_bypass $http_upgrade;
+         }
+     }
+     ```
+     Save the file and exit.
+
+4. **Create a symbolic link to enable the site:**
+   ```bash
+   sudo ln -s /etc/nginx/sites-available/your_app /etc/nginx/sites-enabled
+   ```
+
+5. **Test Nginx configuration:**
+   ```bash
+   sudo nginx -t
+   ```
+
+6. **Restart Nginx:**
+   ```bash
+   sudo service nginx restart
+   ```
+
+Now, your Node.js app should be accessible on both `http://your_domain_or_ip` and `https://your_domain_or_ip`. Make sure to replace placeholders like `your_domain_or_ip` and `your_node_app_port` with your actual values.
+
+Note: If you want to use SSL (HTTPS), you need to have an SSL certificate. Replace `/path/to/your/ssl_certificate.crt` and `/path/to/your/ssl_certificate_key.key` with the actual paths to your SSL certificate and private key files. If you don't have an SSL certificate, you can obtain one from a certificate authority or use a free service like Let's Encrypt.
+
+Certainly! To install Nginx on a Debian-based Linux distribution (such as Ubuntu), you can use the following commands:
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+This will update your package list and install Nginx on your system. After the installation is complete, you can start, stop, and restart Nginx using the following commands:
+
+- To start Nginx:
+  ```bash
+  sudo service nginx start
+  ```
+
+- To stop Nginx:
+  ```bash
+  sudo service nginx stop
+  ```
+
+- To restart Nginx after making configuration changes:
+  ```bash
+  sudo service nginx restart
+  ```
+
+Nginx should now be installed on your system, and you can proceed with the configuration steps mentioned in the previous response to set up your Node.js app to be served on port 80 and 443.
+
+
+In the `server_name` directive, you should provide the domain name or IP address that you want to associate with your Node.js app. If you have a domain name, you would replace `your_domain_or_ip` with that domain. For example:
+
+```nginx
+server_name example.com;
+```
+
+If you are using an IP address, replace `your_domain_or_ip` with the actual IP address:
+
+```nginx
+server_name 192.168.1.2;
+```
+
+Choose the appropriate option based on whether you have a domain or if you're using an IP address to access your server.
+

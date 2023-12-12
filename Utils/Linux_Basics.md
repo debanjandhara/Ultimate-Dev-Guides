@@ -274,3 +274,15 @@ server_name 192.168.1.2;
 
 Choose the appropriate option based on whether you have a domain or if you're using an IP address to access your server.
 
+
+
+--------------------------------------------------
+Write here how to do rate limiting and gunicorn and gevent in flask
+how to deploy node with pm2
+how to deploy react using serve -->
+
+npm install -g serve
+npm run build --> fine buld directory (here:dist)
+serve -s dist
+
+--------------------------------------------------

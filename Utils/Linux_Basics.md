@@ -192,9 +192,6 @@ To serve your Node.js app on port 80 and 443 on a Linux server, you can use a re
             return 301 https://$host$request_uri;
         }
     }
-
-   // -------------------------------------
-
            
      server {
          listen 80;

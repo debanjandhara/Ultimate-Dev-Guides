@@ -181,48 +181,49 @@ To serve your Node.js app on port 80 and 443 on a Linux server, you can use a re
 
    - Add the following configuration, replacing placeholders with your actual values:
      ```nginx
+     // --------------- For ONLY HTTPS -----------
 
-     // ----------- for only https ----------
-     
-     server {
-        listen 80;
-        server_name <ip_address>;
-    
-        location / {
-            return 301 https://$host$request_uri;
-        }
+server {
+    listen 80;
+    server_name your_domain_or_ip;
+
+    location / {
+        return 301 https://$host$request_uri;
     }
-           
-     server {
-         listen 80;
-         server_name your_domain_or_ip;
+}
 
-         location / {
-             proxy_pass http://127.0.0.1:your_node_app_port;
-             proxy_http_version 1.1;
-             proxy_set_header Upgrade $http_upgrade;
-             proxy_set_header Connection 'upgrade';
-             proxy_set_header Host $host;
-             proxy_cache_bypass $http_upgrade;
-         }
-     }
+// -----------------------------------
 
-     server {
-         listen 443 ssl;
-         server_name your_domain_or_ip;
+server {
+    listen 80;
+    server_name your_domain_or_ip;
 
-         ssl_certificate /path/to/your/ssl_certificate.crt;
-         ssl_certificate_key /path/to/your/ssl_certificate_key.key;
+    location / {
+        proxy_pass http://127.0.0.1:your_node_app_port;
+            proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
 
-         location / {
-             proxy_pass http://127.0.0.1:your_node_app_port;
-             proxy_http_version 1.1;
-             proxy_set_header Upgrade $http_upgrade;
-             proxy_set_header Connection 'upgrade';
-             proxy_set_header Host $host;
-             proxy_cache_bypass $http_upgrade;
-         }
-     }
+server {
+    listen 443 ssl;
+    server_name your_domain_or_ip;
+
+    ssl_certificate / path / to / your / ssl_certificate.crt;
+    ssl_certificate_key / path / to / your / ssl_certificate_key.key;
+
+    location / {
+        proxy_pass http://127.0.0.1:your_node_app_port;
+            proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
      ```
      Save the file and exit.
 

@@ -181,6 +181,20 @@ To serve your Node.js app on port 80 and 443 on a Linux server, you can use a re
 
    - Add the following configuration, replacing placeholders with your actual values:
      ```nginx
+
+     // ----------- for only https ----------
+     
+     server {
+        listen 80;
+        server_name <ip_address>;
+    
+        location / {
+            return 301 https://$host$request_uri;
+        }
+    }
+
+     // -------------------------------------
+        
      server {
          listen 80;
          server_name your_domain_or_ip;
@@ -214,17 +228,17 @@ To serve your Node.js app on port 80 and 443 on a Linux server, you can use a re
      ```
      Save the file and exit.
 
-4. **Create a symbolic link to enable the site:**
+5. **Create a symbolic link to enable the site:**
    ```bash
    sudo ln -s /etc/nginx/sites-available/your_app /etc/nginx/sites-enabled
    ```
 
-5. **Test Nginx configuration:**
+6. **Test Nginx configuration:**
    ```bash
    sudo nginx -t
    ```
 
-6. **Restart Nginx:**
+7. **Restart Nginx:**
    ```bash
    sudo service nginx restart
    ```

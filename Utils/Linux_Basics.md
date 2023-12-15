@@ -295,3 +295,59 @@ npm run build --> fine buld directory (here:dist)
 serve -s dist
 
 --------------------------------------------------
+
+
+server {
+    listen 80;
+    server_name pineai.co 89.117.77.63;
+    
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /return-text/ {
+    	proxy_pass http://127.0.0.1:8002;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name pineai.co 89.117.77.63;
+
+    # Provider - Certbot
+
+    ssl_certificate /etc/letsencrypt/live/pineai.co/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/pineai.co/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # ___________________
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /return-text/ {
+        proxy_pass http://127.0.0.1:8002;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}

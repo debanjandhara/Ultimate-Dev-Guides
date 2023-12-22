@@ -1,0 +1,26 @@
+create me the same thing for python programming language 
+
+and 
+
+I want the same emoji filled, point wise, code snippet provided comprehensive guide atleast 2000 words from scratch to expert level
+
+
+
+create me the same thing for <placeholder> programming language 
+
+and 
+
+I want the same emoji filled, point wise, code snippet provided comprehensive guide atleast 2000 words from scratch to expert level
+
+1) Data Structure with Pseudo Code
+2) Aolgorithms
+3) Operating System
+4) Networking
+5) DBMS (types of db) - orms
+6) Tech Stacks :
+	a) t3
+	b) web3
+	c) MERN
+	d) Types of apis, Socket
+7) Cloud Computing (+dev ops)
+8) System Design

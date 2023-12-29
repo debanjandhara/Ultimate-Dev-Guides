@@ -296,7 +296,7 @@ serve -s dist
 
 --------------------------------------------------
 
-
+```nginx
 server {
     listen 80;
     server_name pineai.co 89.117.77.63;
@@ -351,3 +351,4 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
+```

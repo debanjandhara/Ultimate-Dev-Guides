@@ -354,7 +354,7 @@ server {
 ```
 
 
-
+```bash
 # first install GIT CLI, not from snap:
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 23F3D4EA75716059
 sudo apt-add-repository https://cli.github.com/packages
@@ -379,3 +379,4 @@ git push -f https://github.com/.....
 # if it asks for password, give them the token:
 Username for 'https://github.com': <your GitHub name>
 Password for 'https://...@github.com': <token, not password>
+```

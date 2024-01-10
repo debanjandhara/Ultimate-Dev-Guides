@@ -380,3 +380,7 @@ git push -f https://github.com/.....
 Username for 'https://github.com': <your GitHub name>
 Password for 'https://...@github.com': <token, not password>
 ```
+
+```bash
+gunicorn -w 10 -k gevent -b 0.0.0.0:8080 main:app
+```

@@ -183,7 +183,7 @@ To serve your Node.js app on port 80 and 443 on a Linux server, you can use a re
      ```nginx
      server {
          listen 80;
-         server_name <ip_address>;
+         server_name your_domain_or_ip;
 
          location / {
              return 301 https://$host$request_uri;

@@ -353,6 +353,7 @@ server {
 }
 ```
 
+https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
 
 ```bash
 # first install GIT CLI, not from snap:

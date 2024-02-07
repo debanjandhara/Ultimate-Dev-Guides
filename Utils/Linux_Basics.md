@@ -283,6 +283,16 @@ server_name 192.168.1.2;
 
 Choose the appropriate option based on whether you have a domain or if you're using an IP address to access your server.
 
+This is to 1) http --> https and 2) ip --> domain name redirection
+```nginx
+server {
+    listen 80;
+    listen [::]:80;
+    server_name pineai.co 89.117.77.63;
+    return 301 https://pineai.co$request_uri;
+ }
+```
+
 
 
 --------------------------------------------------

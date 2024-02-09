@@ -12,6 +12,8 @@ and
 
 I want the same emoji filled, point wise, code snippet provided comprehensive guide atleast 2000 words from scratch to expert level
 
+coding --> nodejs , react , next 
+
 1) Data Structure with Pseudo Code
 2) Aolgorithms
 3) Operating System
@@ -24,3 +26,15 @@ I want the same emoji filled, point wise, code snippet provided comprehensive gu
 	d) Types of apis, Socket
 7) Cloud Computing (+dev ops)
 8) System Design
+
+1) Python - Multi folder work, import and import .filename & venv management ; threads, workder threads, asynchio- flask , falsk - socket.io, falsk - query params; body json pattern ,
+2) django codes, apis --> from mehta projects
+3) Cors setups 
+
+2) Nginx Load Balancer - thrid party - config files, normal application files
+3) Serve -s dist --> react deployment --> via express.cjs --> pm2 scalability ---> fork / cluster --> ecosystem.js
+4) systemd services
+5) lsof :port , ss --> list of services, cron jobs
+6) github learn --> merge conflict, fetch 
+7) HF - Pygmallion
+8) 

@@ -4,14 +4,18 @@ Welcome to the Roadmap Repository! This repository contains a collection of road
 
 ## Topics Covered
 
-### Coding (Folder) 
+### Coding
 
-- [C++](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/CPP_Guide.md)
-- [Javascript](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/Javascript.md)
-- [Python](link_to_topic_3)
-- [Java](link_to_topic_3)
+- [BASH](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/Bash.md)
+- [C](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/C.md)
+- [C++](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/Cpp.md)
+- [Java](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/Java.md)
+- [JavaScript](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/JavaScript.md)
+- [Python](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/Python.md)
 
 ### DS
+
+Add Link to 75 Blind, neetcode, babber and striver sheet
 
 array, string, LL, stck, que, hashin,
 - [Topic 1](link_to_topic_1)
@@ -25,40 +29,48 @@ Graph etc
 - [Topic 2](link_to_topic_2)
 - [Topic 3](link_to_topic_3)
 
-### Utils 
+###  Frontend
 
-Network, os, github
-- [Topic 1](link_to_topic_1)
-- [Topic 2](link_to_topic_2)
-- [Topic 3](link_to_topic_3)
+- [HTML](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Frontend/HTML.md)
+- [CSS](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Frontend/CSS.md)
+- [Javascript](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Frontend/Javascript.md)
 
+###  Backend
 
-### Javasripts, TS
+- [Django](https://github.com/debanjandhara/Ultimate-Dev-Guides/tree/main/Backend/Django)
+- [Express](https://github.com/debanjandhara/Ultimate-Dev-Guides/tree/main/Backend/Express)
+- [FastAPI](https://github.com/debanjandhara/Ultimate-Dev-Guides/tree/main/Backend/FastAPI)
+- [Flask](https://github.com/debanjandhara/Ultimate-Dev-Guides/tree/main/Backend/Flask)
 
-react, node
-- [Node JS](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Javascripts/NodeJS.md)
-- [React JS](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Javascripts/React.md)
-- [Angular JS]
-- [Typescript]
-- [NextJS](link_to_topic_3)
+###  Javascripts
 
-### Web Dev
+- [Next JS](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Javascripts/Next.js.md)
+- [React](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Javascripts/React.md)
+- [TypeScript](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Javascripts/TypeScript.md)
 
-Basics
-- [Topic 1](link_to_topic_1)
-- [ORMs and DB](link_to_topic_2)
-- [Topic 3](link_to_topic_3)
-
-
-### Libs
+###  Databases
 
 - [Topic 1](link_to_topic_1)
 - [Topic 2](link_to_topic_2)
 - [Topic 3](link_to_topic_3)
 
-### Software Design Patterns and Solutions 
+###  Linux
 
-- [Python - MVC - Functions from other files - app.py/main.py - routes/api](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Coding/CPP_Guide.md)
+- [Linux Basics](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Linux/Linux_Basics.md)
+- [Deployment Scripts](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Linux/Deployment_Scripts.md)
+- [Nginx](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Linux/Nginx.md)
+- [Screen](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/Linux/Screen.md)
+
+###  Theory
+
+- [Network](link_to_topic_1)
+- [OS](link_to_topic_2)
+- [Topic 3](link_to_topic_3)
+
+### Web Dev RoadMap
+
+- [Topic 3](link_to_topic_3)
+
 
 ## How to Use
 
@@ -72,7 +84,7 @@ If you have suggestions, improvements, or want to contribute to any roadmap, fee
 
 ## License
 
-This repository is open-source and available under the [LICENSE NAME](link_to_license) license. Please review the license terms before using the content.
+This repository is open-source and available under the [LICENSE NAME](https://github.com/debanjandhara/Ultimate-Dev-Guides/blob/main/LICENSE) license. Please review the license terms before using the content.
 
 ---
 

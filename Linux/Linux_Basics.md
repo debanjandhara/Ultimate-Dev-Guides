@@ -309,10 +309,35 @@ serve -s dist
 ```nginx
 server {
     listen 80;
+    listen [::]:80;
     server_name pineai.co 89.117.77.63;
-    
+    return 301 https://pineai.co$request_uri;
+ }
+
+server {
+    listen 80;
+    server_name pineai.co 89.117.77.63;
+
+    location /api/admin/ {
+        proxy_pass http://127.0.0.1:8001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
     location / {
         proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api/ {
+    	proxy_pass http://127.0.0.1:8001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -327,6 +352,7 @@ server {
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
     }
 }
 
@@ -352,6 +378,15 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
+    location /api/ {
+    	proxy_pass http://127.0.0.1:8001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
     location /return-text/ {
         proxy_pass http://127.0.0.1:8002;
         proxy_http_version 1.1;
@@ -359,8 +394,10 @@ server {
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
     }
 }
+
 ```
 
 https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/

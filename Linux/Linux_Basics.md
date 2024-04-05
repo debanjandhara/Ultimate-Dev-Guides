@@ -432,3 +432,11 @@ Password for 'https://...@github.com': <token, not password>
 ```bash
 gunicorn -w 10 -k gevent -b 0.0.0.0:8080 main:app
 ```
+
+```bash
+sudo snap install certbot --classic
+```
+
+```bash
+sudo certbot --nginx -d domain.com -d www.domain.com
+```

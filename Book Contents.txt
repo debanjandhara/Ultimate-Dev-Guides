@@ -1,16 +1,12 @@
-create me the same thing for python programming language 
+How to Start a Topic :
+give me a comprehensive guide of <Subject_Name>, detailed divided into chapters, like i am writing any book, from beginner level to expert level, list all the things in an index , in a proper md format. Make it soo large, that I have to continue generating response. and later use those index to write a book, include topics like <List_importtant topics you don't want to miss, also say it to show implementation if needed> . Do not miss anything, any sub topics.
 
-and 
+How to continue it : 
 
-I want the same emoji filled, point wise, code snippet provided comprehensive guide atleast 2000 words from scratch to expert level
+this is the content of chapter <chapter_number_here> : "<chapter_content_here>"
 
+use this content to generate a book like comprehensive guide of python, detailed divided into topics and topics, like i am writing any book, from beginner level to expert level, list all the things which is nessesary, in a proper md format, you could also add emojis to make it fun to read. Make it soo large, that I have to continue generating response. Show the implementation in a short way. Make the guide in such a way, that it is detailed, but don't decribe a lot, make it short to read, and cramp up information, so that with a very little things, I could learn a lot.
 
-
-create me the same thing for <placeholder> programming language 
-
-and 
-
-I want the same emoji filled, point wise, code snippet provided comprehensive guide atleast 2000 words from scratch to expert level
 
 coding --> nodejs , react , next 
 

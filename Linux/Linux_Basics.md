@@ -440,3 +440,8 @@ sudo snap install certbot --classic
 ```bash
 sudo certbot --nginx -d domain.com -d www.domain.com
 ```
+
+## To git pull at once using <token> key : 
+```bash
+git pull https://<username_self/other>:<token_key_self/other>@github.com/debanjandhara/the_art_story_chatbot.git
+```

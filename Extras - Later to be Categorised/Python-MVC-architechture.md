@@ -98,3 +98,6 @@ Make sure to adjust the code to your specific use case, and ensure that the .env
 
 
 Visit for folder wise divide, how to in python --> https://teclado.com/30-days-of-python/python-30-day-21-multiple-files/
+
+
+--- use __init__.py to identify the folders, from which you are importing functions

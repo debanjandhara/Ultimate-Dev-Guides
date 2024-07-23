@@ -1,0 +1,6 @@
+-> All the Frameworks > 
+- How to Start / Run the Application
+- Template Code to Intregrate DB / Define Schema
+- Proper Folder Structure to Segregrate Functions
+- Importing / Calling / Defining API Routes
+- Exporting / Importing Function from one another

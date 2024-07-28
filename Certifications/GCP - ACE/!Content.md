@@ -1,4 +1,4 @@
-# Google Cloud Platform Overview
+# Contents / Index
 
 ## Chapter 1: Overview of Google Cloud Platform
 - Types of Cloud Services, Compute Resources, Storage, Networking, Specialized Services, Cloud Computing vs. Data Center Computing, Rent Instead of Own Resources, Pay-as-You-Go-for-What-You-Use Model, Elastic Resource Allocation, Specialized Services.

@@ -1,3 +1,20 @@
+```Python
+x = "You Rock!" #str	
+x = 69	#int	
+x = 69.9	#float	
+x = 1j	#complex	
+x = ["red", "blue", "green"]	#list	
+x = ("red", "blue", "green")	#tuple	
+x = range(20)	#range	
+x = {"name" : "Taylor", "age" : 35}	#dict	
+x = {"red", "blue", "green"}	#set	
+x = frozenset({"red", "blue", "chegreenrry"})	#frozenset	
+x = True	#bool	
+x = b"You Rock!"	#bytes	
+x = bytearray(10)	#bytearray	
+x = memoryview(bytes(10))	#memoryview	
+x = None	#NoneType
+```
 
 
 ****Data Structures**** are a way of organizing data so that it can be
@@ -15,7 +32,7 @@ In this article, we will discuss the Data Structures in the Python Programming L
  structures like trees, graphs, etc.
 
 
-aeiou12345
+
 Lists
 -----
 
@@ -38,13 +55,11 @@ We can create a list in python as shown below.
 ### ****Example: Creating Python List****
 
 
-Python
-
-````
+```Python
 List = [1, 2,  3, "GFG", 2.3]
 print(List)
 
-````
+```
 
   
 **Output**
@@ -64,9 +79,7 @@ List elements can be accessed by the assigned index. In python starting index of
 ### ****Example: Python List Operations****
 
 
-Python
-
-````
+```Python
 # Creating a List with 
 # the use of multiple values 
 List = ["Geeks", "For", "Geeks"] 
@@ -97,7 +110,7 @@ print(List[-1])
 # print the third last element of list  
 print(List[-3]) 
 
-````
+```
 
   
 **Output**
@@ -125,7 +138,7 @@ Python
  dictionary is like hash tables in any other language with the time complexity of
  O(1\). It is an unordered collection of data values, used to store data values like a map, which, unlike
  other Data Types that hold only a single value as an element, Dictionary holds the key:value pair.
- Key\-value is provided in the dictionary to make it more optimized.aeiou12345
+ Key\-value is provided in the dictionary to make it more optimized.
 
 
 Indexing of Python Dictionary is done with the help of keys. These are of any hashable type
@@ -137,9 +150,7 @@ Indexing of Python Dictionary is done with the help of keys. These are of any ha
 ### ****Example: Python Dictionary Operations****
 
 
-Python
-
-````
+```Python
 # Creating a Dictionary
 Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
 print("Creating Dictionary: ")
@@ -158,7 +169,7 @@ print(Dict.get(1))
 myDict = {x: x**2 for x in [1,2,3,4,5]}
 print(myDict)
 
-````
+```
 
   
 **Output**
@@ -196,9 +207,7 @@ In Python, tuples are created by placing a sequence of values separated by 'comm
 ### Example: Python Tuple Operations
 
 
-Python
-
-````
+```Python
 # Creating a Tuple with
 # the use of Strings
 Tuple = ('Geeks', 'For')
@@ -227,7 +236,7 @@ print("
 Third last element of tuple")
 print(Tuple[-3])
 
-````
+```
 
   
 **Output**
@@ -256,7 +265,7 @@ Python
  Set is an unordered collection of data that is mutable and does not allow any
  duplicate element. Sets are basically used to include membership testing and eliminating duplicate
  entries. The data structure used in this is Hashing, a popular technique to perform insertion, deletion,
- and traversal in O(1\) on average.aeiou12345
+ and traversal in O(1\) on average.
 
 
 If Multiple values are present at the same index position, then the value is appended to that
@@ -280,9 +289,7 @@ If Multiple values are present at the same index position, then the value is app
 ### Example: Python Set Operations
 
 
-Python
-
-````
+```Python
 # Creating a Set with  
 # a mixed type of values 
 # (Having numbers and strings) 
@@ -303,7 +310,7 @@ print()
 # using in keyword 
 print("Geeks" in Set) 
 
-````
+```
 
   
 **Output**
@@ -332,9 +339,7 @@ If no parameters are passed, it returns an empty frozenset.
 
 
 
-Python
-
-````
+```Python
 # Same as {"a", "b","c"}
 normal_set = set(["a", "b","c"])
 
@@ -352,7 +357,7 @@ print(frozen_set)
 # we are trying to add element to a frozen set
 # frozen_set.add("h")
 
-````
+```
 
   
 **Output**
@@ -387,9 +392,7 @@ Python
 ### Example: Python Strings Operations
 
 
-Python
-
-````
+```Python
 String = "Welcome to GeeksForGeeks"
 print("Creating String: ") 
 print(String) 
@@ -404,7 +407,7 @@ print("
 Last character of String is: ") 
 print(String[-1]) 
 
-````
+```
 
   
 **Output**
@@ -433,9 +436,7 @@ Python
 ### Example: Python Bytearray Operations
 
 
-Python
-
-````
+```Python
 # Creating bytearray
 a = bytearray((12, 8, 25, 2))
 print("Creating Bytearray:")
@@ -457,22 +458,22 @@ print("
 After Adding Elements:")
 print(a)
 
-````
+```
 
   
 **Output**
 
 ```
 Creating Bytearray:
-bytearray(b'')
+bytearray(b'\x0c\x08\x19\x02')
 
 Accessing Elements: 8
 
 After Modifying:
-bytearray(b'')
+bytearray(b'\x0c\x08\x19\x02')
 
 After Adding Elements:
-bytearray(b'')
+bytearray(b'\x0c\x08\x19\x02\x1e')
 ```
 
 
@@ -502,9 +503,7 @@ A counter is a sub\-class of the dictionary. It is used to keep the
 ### Example: Python Counter Operations
 
 
-Python
-
-````
+```Python
 from collections import Counter
   
 # With sequence of items 
@@ -517,7 +516,7 @@ print(count)
 count.update(['A', 1])
 print(count)
 
-````
+```
 
   
 **Output**
@@ -533,15 +532,13 @@ Counter({'B': 5, 'A': 4, 'C': 2, 1: 1})
 
 
 An OrderedDict is also a sub\-class of dictionary but unlike a
- dictionary, it remembers the order in which the keys were inserted.aeiou12345
+ dictionary, it remembers the order in which the keys were inserted.
 
 
 ### Example: Python OrderedDict Operations
 
 
-Python
-
-````
+```Python
 from collections import OrderedDict
 
 print("Before deleting:
@@ -569,7 +566,7 @@ od['c'] = 3
 for key, value in od.items():
     print(key, value)
 
-````
+```
 
   
 **Output**
@@ -612,9 +609,7 @@ DefaultDict is used to provide some default values for the key
 ### Example: Python DefaultDict Operations
 
 
-Python
-
-````
+```Python
 from collections import defaultdict
     
 
@@ -634,7 +629,7 @@ for i in L:
         
 print(d)
 
-````
+```
 
   
 **Output**
@@ -655,9 +650,7 @@ A ChainMap encapsulates many dictionaries into a single unit and
 ### Example: Python ChainMap Operations
 
 
-Python
-
-````
+```Python
 from collections import ChainMap
     
     
@@ -672,7 +665,7 @@ print(c)
 print(c['a'])
 print(c['g'])
 
-````
+```
 
 ****Output****
 
@@ -702,9 +695,7 @@ A NamedTuple returns a tuple object with names for each position
 ### Example: Python NamedTuple Operations
 
 
-Python
-
-````
+```Python
 from collections import namedtuple
     
 # Declaring namedtuple()
@@ -721,7 +712,7 @@ print (S[1])
 print ("The Student name using keyname is : ",end ="")
 print (S.name)
 
-````
+```
 
   
 **Output**
@@ -748,9 +739,7 @@ Python Deque is implemented using doubly linked lists therefore the performance 
 ### Example: Python Deque Operations
 
 
-Python
-
-````
+```Python
 # importing "collections" for deque operations
 import collections
 
@@ -789,7 +778,7 @@ de.popleft()
 print("The deque after deleting from left is : ")
 print(de)
 
-````
+```
 
   
 **Output**
@@ -812,15 +801,13 @@ UserDict
 
 UserDict is a dictionary\-like container that acts as a wrapper
  around the dictionary objects. This container is used when someone wants to create their own dictionary
- with some modified or new functionality.aeiou12345
+ with some modified or new functionality.
 
 
 ### Example: Python UserDict
 
 
-Python
-
-````
+```Python
 from collections import UserDict
 
 # Creating a Dictionary where
@@ -852,7 +839,7 @@ print(d)
 
 d.pop(1)
 
-````
+```
 
 ****Output****
 
@@ -879,9 +866,7 @@ UserList is a list\-like container that acts as a wrapper around
 ### Examples: Python UserList
 
 
-Python
-
-````
+```Python
 # Python program to demonstrate
 # userlist
 
@@ -917,7 +902,7 @@ print(L)
 # Deleting From List
 L.remove()
 
-````
+```
 
 ****Output****
 
@@ -940,15 +925,13 @@ RuntimeError: Deletion not allowed
 
 UserString is a string\-like container and just like UserDict and
  UserList, it acts as a wrapper around string objects. It is used when someone wants to create their own
- strings with some modified or additional functionality.aeiou12345
+ strings with some modified or additional functionality.
 
 
 ### Example: Python UserString
 
 
-Python
-
-````
+```Python
 from collections import UserString
 
 # Creating a Mutable String
@@ -976,7 +959,7 @@ print("String After Appending:", s1.data)
 s1.remove("e")
 print("String after Removing:", s1.data)
 
-````
+```
 
   
 **Output**
@@ -1017,9 +1000,7 @@ A linked list is represented by a pointer to the first node of the linked list. 
 ### Example: Defining Linked List in Python
 
 
-Python
-
-````
+```Python
 # Node class
 class Node:
 
@@ -1037,15 +1018,13 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-````
+```
 
 Let us create a simple linked list with 3 nodes.
 
 
 
-Python
-
-````
+```Python
 # A simple Python program to introduce a linked list
 
 # Node class
@@ -1116,9 +1095,9 @@ if __name__=='__main__':
     +----+------+     +----+------+     +----+------+
     '''
 
-````
+```
 
-### Linked List Traversalaeiou12345
+### Linked List Traversal
 
 
 In the previous program, we have created a simple linked list with three nodes. Let us
@@ -1127,9 +1106,7 @@ In the previous program, we have created a simple linked list with three nodes. 
 
 
 
-Python
-
-````
+```Python
 # A simple Python program for traversal of a linked list
 
 # Node class
@@ -1172,7 +1149,7 @@ if __name__=='__main__':
 
     list.printList()
 
-````
+```
 
   
 **Output**
@@ -1227,14 +1204,12 @@ Stack in Python can be implemented using the following ways:
 
 
 Python's built\-in data structure list can be used as a stack. Instead of push(), append() is
- used to add elements to the top of the stack while pop() removes the element in LIFO order.aeiou12345
+ used to add elements to the top of the stack while pop() removes the element in LIFO order.
 
 
 
 
-Python
-
-````
+```Python
 stack = []
 
 # append() function to push
@@ -1263,7 +1238,7 @@ print(stack)
 # will cause an IndexError
 # as the stack is now empty
 
-````
+```
 
   
 **Output**
@@ -1288,13 +1263,11 @@ Stack after elements are popped:
 Python stack can be implemented using the deque class from the collections module. Deque is
  preferred over the list in the cases where we need quicker append and pop operations from both the ends
  of the container, as deque provides an O(1\) time complexity for append and pop operations as compared to
- list which provides O(n) time complexity.aeiou12345
+ list which provides O(n) time complexity.
 
 
 
-Python
-
-````
+```Python
 from collections import deque
 
 stack = deque()
@@ -1325,7 +1298,7 @@ print(stack)
 # will cause an IndexError
 # as the stack is now empty
 
-````
+```
 
   
 **Output**
@@ -1348,13 +1321,11 @@ deque([])
 
 
 The queue module also has a LIFO Queue, which is basically a Stack. Data is inserted into
- Queue using the put() function and get() takes data out from the Queue.aeiou12345
+ Queue using the put() function and get() takes data out from the Queue.
 
 
 
-Python
-
-````
+```Python
 from queue import LifoQueue
 
 # Initializing a stack
@@ -1385,7 +1356,7 @@ print(stack.get())
 print("
 Empty: ", stack.empty())
 
-````
+```
 
   
 **Output**
@@ -1449,9 +1420,7 @@ Instead of enqueue() and dequeue(), append() and pop() function is used.
 
 
 
-Python
-
-````
+```Python
 # Initializing a queue
 queue = []
 
@@ -1478,7 +1447,7 @@ print(queue)
 # will raise and IndexError
 # as the queue is now empty
 
-````
+```
 
   
 **Output**
@@ -1506,9 +1475,7 @@ Deque is preferred over the list in the cases where we need quicker append and p
 
 
 
-Python
-
-````
+```Python
 from collections import deque
 
 # Initializing a queue
@@ -1537,7 +1504,7 @@ print(q)
 # will raise an IndexError
 # as queue is now empty
 
-````
+```
 
   
 **Output**
@@ -1560,13 +1527,11 @@ deque([])
 
 
 queue.Queue(maxsize) initializes a variable to a maximum size of maxsize. A maxsize of zero
- '0' means an infinite queue. This Queue follows the FIFO rule.aeiou12345
+ '0' means an infinite queue. This Queue follows the FIFO rule.
 
 
 
-Python
-
-````
+```Python
 from queue import Queue
 
 # Initializing a queue
@@ -1607,7 +1572,7 @@ print("Full: ", q.full())
 # Loop as the Queue is empty.
 # print(q.get())
 
-````
+```
 
   
 **Output**
@@ -1645,9 +1610,7 @@ Priority
  queue.
 
 
-Python
-
-````
+```Python
 # A simple implementation of Priority Queue
 # using Queue.
 class PriorityQueue(object):
@@ -1689,7 +1652,7 @@ if __name__ == '__main__':
     while not myQueue.isEmpty():
         print(myQueue.delete())
 
-````
+```
 
   
 **Output**
@@ -1711,7 +1674,7 @@ heapq
  module in Python provides the heap data structure that is mainly used to represent
  a priority queue. The property of this data structure in Python is that each time the smallest heap
  element is popped(min\-heap). Whenever elements are pushed or popped, heap structure is maintained. The
- heap\[0] element also returns the smallest element each time.aeiou12345
+ heap\[0] element also returns the smallest element each time.
 
 
 It supports the extraction and insertion of the smallest element in the O(log n)
@@ -1719,9 +1682,7 @@ It supports the extraction and insertion of the smallest element in the O(log n)
 
 
 
-Python
-
-````
+```Python
 # importing "heapq" to implement heap queue
 import heapq
 
@@ -1747,7 +1708,7 @@ print (list(li))
 print ("The popped and smallest element is : ",end="")
 print (heapq.heappop(li))
 
-````
+```
 
   
 **Output**
@@ -1763,7 +1724,7 @@ Binary Tree
 -----------
 
 
-A tree is a aeiou12345hierarchical data structure that looks like the below figure \-aeiou12345
+A tree is a hierarchical data structure that looks like the below figure \-
 
 
 
@@ -1794,9 +1755,7 @@ A binary tree is a tree whose elements can have almost two children.
 ### Example: Defining Node Class
 
 
-Python
-
-````
+```Python
 # A Python class that represents an individual node
 # in a Binary Tree
 class Node:
@@ -1805,10 +1764,10 @@ class Node:
         self.right = None
         self.val = key
 
-````
+```
 
 Now let's create a tree with 4 nodes in Python. Let's assume the tree structure looks like
- below \-aeiou12345
+ below \-
 
 
 
@@ -1824,9 +1783,7 @@ Now let's create a tree with 4 nodes in Python. Let's assume the tree structure 
 ### Example: Adding data to the tree
 
 
-Python
-
-````
+```Python
 # Python program to introduce Binary Tree
 
 # A class that represents an individual node in a
@@ -1866,13 +1823,13 @@ root.left.left = Node(4);
 / \
 None None'''
 
-````
+```
 
 ### Tree Traversal
 
 
 Trees can be traversed in different ways. Following are the
- generally used ways for traversing trees. Let us consider the below tree \-aeiou12345
+ generally used ways for traversing trees. Let us consider the below tree \-
 
 
 
@@ -1916,9 +1873,7 @@ Trees can be traversed in different ways. Following are the
 * Visit the root.
 
 
-Python
-
-````
+```Python
 # Python program to for tree traversals
 
 # A class that represents an individual node in a
@@ -1992,7 +1947,7 @@ print("
 Postorder traversal of binary tree is")
 printPostorder(root)
 
-````
+```
 
   
 **Output**
@@ -2021,7 +1976,7 @@ Postorder traversal of binary tree is
 ```
 
 
-Time Complexity \- aeiou12345O(n)aeiou12345
+Time Complexity \- O(n)
 
 
 ****Breadth\-First or Level Order Traversal****
@@ -2033,7 +1988,7 @@ Level
 
 
 For each node, first, the node is visited and then its child nodes are put in a FIFO queue.
- Below is the algorithm for the same \-aeiou12345
+ Below is the algorithm for the same \-
 
 
 * Create an empty queue q
@@ -2044,9 +1999,7 @@ For each node, first, the node is visited and then its child nodes are put in a 
 	+ Dequeue a node from q
 
 
-Python
-
-````
+```Python
 # Python program to print level
 # order traversal using Queue
 
@@ -2099,7 +2052,7 @@ root.left.right = Node(5)
 print ("Level Order Traversal of binary tree is -")
 printLevelOrder(root)
 
-````
+```
 
   
 **Output**
@@ -2114,7 +2067,7 @@ Level Order Traversal of binary tree is -
 ```
 
 
-Time Complexity: O(n)aeiou12345
+Time Complexity: O(n)
 
 
 Graph
@@ -2148,13 +2101,11 @@ Adjacency Matrix is a 2D array of size V x V where V is the number of vertices i
  Let the 2D array be adj\[]\[], a slot adj\[i]\[j] \= 1 indicates that there is an edge from vertex i to
  vertex j. The adjacency matrix for an undirected graph is always symmetric. Adjacency Matrix is also
  used to represent weighted graphs. If adj\[i]\[j] \= w, then there is an edge from vertex i to vertex j
- with weight w.aeiou12345
+ with weight w.
 
 
 
-Python
-
-````
+```Python
 # A simple representation of graph using Adjacency Matrix
 class Graph:
     def __init__(self,numvertex):
@@ -2213,7 +2164,7 @@ print(G.get_edges())
 print("Adjacency Matrix of Graph")
 print(G.get_matrix())
 
-````
+```
 
 ****Output****
 
@@ -2246,16 +2197,14 @@ print(G.get_matrix())
 An array of lists is used. The size of the array is equal to the number of vertices. Let the
  array be an array\[]. An entry array\[i] represents the list of vertices adjacent to the ith vertex. This
  representation can also be used to represent a weighted graph. The weights of edges can be represented
- as lists of pairs. Following is the adjacency list representation of the above graph.aeiou12345
+ as lists of pairs. Following is the adjacency list representation of the above graph.
 
 
-![Adjacency List Representation of Graph](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/listadjacency.png)aeiou12345
+![Adjacency List Representation of Graph](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/listadjacency.png)
 
 
 
-Python
-
-````
+```Python
 # A class to represent the adjacency list of the node
 class AdjNode:
     def __init__(self, data):
@@ -2313,7 +2262,7 @@ if __name__ == "__main__":
 
     graph.print_graph()
 
-````
+```
 
   
 **Output**
@@ -2354,13 +2303,11 @@ For example, in the following graph, we start traversal from vertex 2\. When we 
  Traversal of the following graph is 2, 0, 3, 1\.
 
 
-![](https://media.geeksforgeeks.org/wp-content/uploads/bfs-5.png)aeiou12345
+![](https://media.geeksforgeeks.org/wp-content/uploads/bfs-5.png)
 
 
 
-Python
-
-````
+```Python
 # Python3 Program to print BFS traversal
 # from a given source vertex. BFS(int s)
 # traverses vertices reachable from s.
@@ -2428,7 +2375,7 @@ g.BFS(2)
 
 # This code is contributed by Neelam Yadav
 
-````
+```
 
   
 **Output**
@@ -2460,9 +2407,7 @@ Depth First Traversal for a graph is similar to Depth First
  index of the adjacent node.
 
 
-Python
-
-````
+```Python
 # Python3 program to print DFS traversal
 # from a given graph
 from collections import defaultdict
@@ -2524,7 +2469,7 @@ g.addEdge(3, 3)
 print("Following is DFS from (starting from vertex 2)")
 g.DFS(2)
 
-````
+```
 
   
 **Output**

@@ -294,12 +294,12 @@ print(a)
 ```
 **Output**
 Creating Bytearray:
-bytearray(b'')
+bytearray(b'\x0c\x08\x19\x02')
 Accessing Elements: 8
 After Modifying:
-bytearray(b'')
+bytearray(b'\x0c\x03\x19\x02')
 After Adding Elements:
-bytearray(b'')
+bytearray(b'\x0c\x03\x19\x02\x1e')
 Till now we have studied all the data structures that come built-in into core Python. Now let
             dive more deep into Python and see the collections module that provides some containers that are useful
             in many cases and provide more features than the above-defined functions.

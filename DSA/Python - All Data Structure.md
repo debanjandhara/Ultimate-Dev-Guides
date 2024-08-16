@@ -58,7 +58,6 @@ We can create a list in python as shown below.
 ```Python
 List = [1, 2,  3, "GFG", 2.3]
 print(List)
-
 ```
 
   
@@ -85,19 +84,47 @@ List elements can be accessed by the assigned index. In python starting index of
 List = ["Geeks", "For", "Geeks"] 
 print("List containing multiple values: ") 
 print(List)
+``` 
 
+**Output**
+
+```
+List containing multiple values: 
+['Geeks', 'For', 'Geeks']
+```
+
+```Python
 # Creating a Multi-Dimensional List 
 # (By Nesting a list inside a List) 
 List2 = [['Geeks', 'For'], ['Geeks']] 
 print("Multi-Dimensional List: ") 
 print(List2) 
+``` 
 
+**Output**
+
+```
+Multi-Dimensional List: 
+[['Geeks', 'For'], ['Geeks']]
+```
+
+```Python
 # accessing a element from the  
 # list using index number 
 print("Accessing element from the list") 
 print(List[0])  
 print(List[2]) 
+``` 
 
+**Output**
+
+```
+Accessing element from the list
+Geeks
+Geeks
+```
+
+```Python
 # accessing a element using 
 # negative indexing 
 print("Accessing element using negative indexing") 
@@ -107,7 +134,17 @@ print(List[-1])
     
 # print the third last element of list  
 print(List[-3]) 
+``` 
 
+**Output**
+
+```
+Accessing element using negative indexing
+Geeks
+Geeks
+```
+
+```Python
 # some more operations
 print("\nSome More Operations:")
 my_list = [1, 2, 3]
@@ -118,7 +155,19 @@ my_list.extend([234, 'more_example']) # adds the elements one-by-one into the li
 print(my_list)
 my_list.insert(1, 'insert_example') # adds the element passed to the index value
 print(my_list)
+``` 
 
+**Output**
+
+```
+Some More Operations:
+[1, 2, 3]
+[1, 2, 3, [555, 12]]
+[1, 2, 3, [555, 12], 234, ‘more_example’]
+[1, ‘insert_example’, 2, 3, [555, 12], 234, ‘more_example’]
+```
+
+```Python
 my_list = [1, 2, 3, 'example', 3.132, 10, 30]
 del my_list[5] #delete element at index 5
 print(my_list)
@@ -128,7 +177,18 @@ a = my_list.pop(1) #pop element from list
 print('Popped Element: ', a, ' List remaining: ', my_list)
 my_list.clear() #empty the list
 print(my_list)
+``` 
 
+**Output**
+
+```
+[1, 2, 3, ‘example’, 3.132, 30]
+[1, 2, 3, 3.132, 30]
+Popped Element: 2 List remaining: [1, 3, 3.132, 30]
+[]
+```
+
+```Python
 my_list = [1, 2, 3, 'example', 3.132, 10, 30]
 for element in my_list: #access elements one by one
     print(element)
@@ -136,44 +196,11 @@ print(my_list) #access all elements
 print(my_list[3]) #access index 3 element
 print(my_list[0:2]) #access elements from 0 to 1 and exclude 2
 print(my_list[::-1]) #access elements in reverse
+``` 
 
-my_list = [1, 2, 3, 10, 30, 10]
-print(len(my_list)) #find length of list
-print(my_list.index(10)) #find index of element that occurs first
-print(my_list.count(10)) #find count of the element
-print(sorted(my_list)) #print sorted list but not change original
-my_list.sort(reverse=True) #sort original list
-print(my_list)
-
-```
-
-  
 **Output**
 
 ```
-List containing multiple values: 
-['Geeks', 'For', 'Geeks']
-
-Multi-Dimensional List: 
-[['Geeks', 'For'], ['Geeks']]
-Accessing element from the list
-Geeks
-Geeks
-Accessing element using negative indexing
-Geeks
-Geeks
-
-Some More Operations:
-[1, 2, 3]
-[1, 2, 3, [555, 12]]
-[1, 2, 3, [555, 12], 234, ‘more_example’]
-[1, ‘insert_example’, 2, 3, [555, 12], 234, ‘more_example’]
-
-[1, 2, 3, ‘example’, 3.132, 30]
-[1, 2, 3, 3.132, 30]
-Popped Element: 2 List remaining: [1, 3, 3.132, 30]
-[]
-
 1
 2
 3
@@ -185,7 +212,22 @@ example
 example
 [1, 2]
 [30, 10, 3.132, ‘example’, 3, 2, 1]
+```
 
+```Python
+my_list = [1, 2, 3, 10, 30, 10]
+print(len(my_list)) #find length of list
+print(my_list.index(10)) #find index of element that occurs first
+print(my_list.count(10)) #find count of the element
+print(sorted(my_list)) #print sorted list but not change original
+my_list.sort(reverse=True) #sort original list
+print(my_list)
+```
+
+  
+**Output**
+
+```
 6
 3
 2
@@ -219,35 +261,87 @@ Indexing of Python Dictionary is done with the help of keys. These are of any ha
 Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
 print("Creating Dictionary: ")
 print(Dict)
+``` 
 
+**Output**
+
+```
+Creating Dictionary: 
+{'Name': 'Geeks', 1: [1, 2, 3, 4]}
+```
+
+```Python
 # accessing a element using key 
 print("Accessing a element using key:") 
 print(Dict['Name']) 
+``` 
 
+**Output**
+
+```
+Accessing a element using key:
+Geeks
+```
+
+```Python
 # accessing a element using get() 
 # method 
 print("Accessing a element using get:") 
 print(Dict.get(1)) 
+``` 
 
+**Output**
+
+```
+Accessing a element using get:
+[1, 2, 3, 4]
+```
+
+```Python
 # creation using Dictionary comprehension
 myDict = {x: x**2 for x in [1,2,3,4,5]}
 print(myDict)
+``` 
 
+**Output**
 
+```
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+```
+
+```Python
 # some more operations
-print("\n-----------Some More Operations:---------------")
 my_dict = {} #empty dictionary
 print(my_dict)
 my_dict = {1: 'Python', 2: 'Java'} #dictionary with elements
 print(my_dict)
+``` 
 
+**Output**
+
+```
+{}
+{1: ‘Python’, 2: ‘Java’}
+```
+
+```Python
 my_dict = {'First': 'Python', 'Second': 'Java'}
 print(my_dict)
 my_dict['Second'] = 'C++' #changing element
 print(my_dict)
 my_dict['Third'] = 'Ruby' #adding key-value pair
 print(my_dict)
+``` 
 
+**Output**
+
+```
+{‘First’: ‘Python’, ‘Second’: ‘Java’}
+{‘First’: ‘Python’, ‘Second’: ‘C++’}
+{‘First’: ‘Python’, ‘Second’: ‘C++’, ‘Third’: ‘Ruby’}
+```
+
+```Python
 my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
 a = my_dict.pop('Third') #pop element
 print('Value:', a)
@@ -257,11 +351,34 @@ print('Key, value pair:', b)
 print('Dictionary', my_dict)
 my_dict.clear() #empty dictionary
 print('n', my_dict)
+``` 
 
+**Output**
+
+```
+Value: Ruby
+Dictionary: {‘First’: ‘Python’, ‘Second’: ‘Java’}
+
+Key, value pair: (‘Second’, ‘Java’)
+Dictionary {‘First’: ‘Python’}
+
+{}
+```
+
+```Python
 my_dict = {'First': 'Python', 'Second': 'Java'}
 print(my_dict['First']) #access elements using keys
 print(my_dict.get('Second'))
+``` 
 
+**Output**
+
+```
+Python
+Java
+```
+
+```Python
 my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
 print(my_dict.keys()) #get keys
 print(my_dict.values()) #get values
@@ -273,45 +390,10 @@ print(my_dict.get('First'))
 **Output**
 
 ```
-Creating Dictionary: 
-{'Name': 'Geeks', 1: [1, 2, 3, 4]}
-Accessing a element using key:
-Geeks
-Accessing a element using get:
-[1, 2, 3, 4]
-{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
-
------------Some More Operations:---------------
-
-{}
-{1: ‘Python’, 2: ‘Java’}
-
-{‘First’: ‘Python’, ‘Second’: ‘Java’}
-{‘First’: ‘Python’, ‘Second’: ‘C++’}
-{‘First’: ‘Python’, ‘Second’: ‘C++’, ‘Third’: ‘Ruby’}
-
--------------  Deleting key, value pairs -----------------
-
-Value: Ruby
-Dictionary: {‘First’: ‘Python’, ‘Second’: ‘Java’}
-
-Key, value pair: (‘Second’, ‘Java’)
-Dictionary {‘First’: ‘Python’}
-
-{}
-
----------------------------------------------------------
-
-Python
-Java
-
----------------------------------------------------------
-
 dict_keys([‘First’, ‘Second’, ‘Third’])
 dict_values([‘Python’, ‘Java’, ‘Ruby’])
 dict_items([(‘First’, ‘Python’), (‘Second’, ‘Java’), (‘Third’, ‘Ruby’)])
 Python
-
 ```
 
 
@@ -343,17 +425,45 @@ In Python, tuples are created by placing a sequence of values separated by 'comm
 Tuple = ('Geeks', 'For')
 print("Tuple with the use of String: ")
 print(Tuple)
-    
+``` 
+
+**Output**
+
+```
+Tuple with the use of String: 
+('Geeks', 'For')
+```
+
+```Python    
 # Creating a Tuple with
 # the use of list
 list1 = [1, 2, 4, 5, 6]
 print("Tuple using List: ")
 Tuple = tuple(list1)
+``` 
 
+**Output**
+
+```
+Tuple using List: 
+First element of tuple
+1
+```
+
+```Python  
 # Accessing element using indexing
 print("First element of tuple")
 print(Tuple[0])
+``` 
 
+**Output**
+
+```
+Last element of tuple
+6
+```
+
+```Python  
 # Accessing element from last
 # negative indexing
 print("Last element of tuple")
@@ -361,7 +471,16 @@ print(Tuple[-1])
   
 print("Third last element of tuple")
 print(Tuple[-3])
+``` 
 
+**Output**
+
+```
+Third last element of tuple
+4
+```
+
+```Python  
 # some more operations
 print("\n-----------Some More Operations:---------------")
 my_tuple2 = (1, 2, 3, 'edureka') #access elements
@@ -371,37 +490,11 @@ print(my_tuple2)
 print(my_tuple2[0])
 print(my_tuple2[:])
 print(my_tuple2[3][4])
+``` 
 
-my_tuple = (1, 2, 3)
-my_tuple = my_tuple + (4, 5, 6) #add elements
-print(my_tuple)
-
-my_tuple = (1, 2, 3, ['hindi', 'python'])
-my_tuple[3][0] = 'english'
-print(my_tuple)
-print(my_tuple.count(2))
-print(my_tuple.index(['english', 'python']))
-
-```
-
-  
 **Output**
 
 ```
-Tuple with the use of String: 
-('Geeks', 'For')
-
-Tuple using List: 
-First element of tuple
-1
-
-Last element of tuple
-6
-
-Third last element of tuple
-4
-
-------------------------------------------------
 1
 2
 3
@@ -410,14 +503,34 @@ edureka
 1
 (1, 2, 3, ‘edureka’)
 e
-------------------------------------------------
+```
+
+```Python  
+my_tuple = (1, 2, 3)
+my_tuple = my_tuple + (4, 5, 6) #add elements
+print(my_tuple)
+``` 
+
+**Output**
+
+```
 (1, 2, 3, 4, 5, 6)
-------------------------------------------------
+```
+
+```Python  
+my_tuple = (1, 2, 3, ['hindi', 'python'])
+my_tuple[3][0] = 'english'
+print(my_tuple)
+print(my_tuple.count(2))
+print(my_tuple.index(['english', 'python']))
+```
+  
+**Output**
+
+```
 (1, 2, 3, [‘english’, ‘python’])
 1
 3
-------------------------------------------------
-
 ```
 
 
@@ -459,25 +572,58 @@ If Multiple values are present at the same index position, then the value is app
 # (Having numbers and strings) 
 Set = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks']) 
 print("Set with the use of Mixed Values") 
-print(Set) 
+print(Set)
+```
 
+**Output**
+
+```
+Set with the use of Mixed Values
+{1, 2, 'Geeks', 4, 6, 'For'}
+```
+
+```Python
 # Accessing element using 
 # for loop 
 print("Elements of set: ") 
 for i in Set: 
     print(i, end =" ") 
 print()
+``` 
 
+**Output**
+
+```
+Elements of set: 
+1 2 Geeks 4 6 For 
+```
+
+```Python
 # Checking the element 
 # using in keyword 
 print("Geeks" in Set)
+``` 
 
+**Output**
+
+```
+True
+```
+
+```Python
 # some more operations
-print("\n-----------Some More Operations:---------------")
 my_set = {1, 2, 3}
 my_set.add(4) #add element to set
 print(my_set)
+``` 
 
+**Output**
+
+```
+{1, 2, 3, 4}
+```
+
+```Python
 my_set = {1, 2, 3, 4}
 my_set_2 = {3, 4, 5, 6}
 print(my_set.union(my_set_2), '----------', my_set | my_set_2)
@@ -486,29 +632,18 @@ print(my_set.difference(my_set_2), '----------', my_set - my_set_2)
 print(my_set.symmetric_difference(my_set_2), '----------', my_set ^ my_set_2)
 my_set.clear()
 print(my_set)
+``` 
 
-```
-
-  
 **Output**
 
 ```
-Set with the use of Mixed Values
-{1, 2, 'Geeks', 4, 6, 'For'}
-
-Elements of set: 
-1 2 Geeks 4 6 For 
-True
-
------------Some More Operations:---------------
-{1, 2, 3, 4}
-
 {1, 2, 3, 4, 5, 6} ———- {1, 2, 3, 4, 5, 6}
 {3, 4} ———- {3, 4}
 {1, 2} ———- {1, 2}
 {1, 2, 5, 6} ———- {1, 2, 5, 6}
 set()
 ```
+
 
 
 Frozen Sets

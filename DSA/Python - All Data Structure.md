@@ -17,7 +17,7 @@ x = None	#NoneType
 ```
 
 
-****Data Structures**** are a way of organizing data so that it can be
+**Data Structures** are a way of organizing data so that it can be
  accessed more efficiently depending upon the situation. Data Structures are fundamentals of any
  programming language around which a program is built. Python helps to learn the fundamental of these
  data structures in a simpler way as compared to other programming languages.
@@ -83,15 +83,13 @@ List elements can be accessed by the assigned index. In python starting index of
 # Creating a List with 
 # the use of multiple values 
 List = ["Geeks", "For", "Geeks"] 
-print("
-List containing multiple values: ") 
+print("List containing multiple values: ") 
 print(List)
 
 # Creating a Multi-Dimensional List 
 # (By Nesting a list inside a List) 
 List2 = [['Geeks', 'For'], ['Geeks']] 
-print("
-Multi-Dimensional List: ") 
+print("Multi-Dimensional List: ") 
 print(List2) 
 
 # accessing a element from the  
@@ -110,6 +108,43 @@ print(List[-1])
 # print the third last element of list  
 print(List[-3]) 
 
+# some more operations
+print("\nSome More Operations:")
+my_list = [1, 2, 3]
+print(my_list)
+my_list.append([555, 12]) # adds all the elements passed to it as a single element
+print(my_list)
+my_list.extend([234, 'more_example']) # adds the elements one-by-one into the list
+print(my_list)
+my_list.insert(1, 'insert_example') # adds the element passed to the index value
+print(my_list)
+
+my_list = [1, 2, 3, 'example', 3.132, 10, 30]
+del my_list[5] #delete element at index 5
+print(my_list)
+my_list.remove('example') #remove element with value
+print(my_list)
+a = my_list.pop(1) #pop element from list
+print('Popped Element: ', a, ' List remaining: ', my_list)
+my_list.clear() #empty the list
+print(my_list)
+
+my_list = [1, 2, 3, 'example', 3.132, 10, 30]
+for element in my_list: #access elements one by one
+    print(element)
+print(my_list) #access all elements
+print(my_list[3]) #access index 3 element
+print(my_list[0:2]) #access elements from 0 to 1 and exclude 2
+print(my_list[::-1]) #access elements in reverse
+
+my_list = [1, 2, 3, 10, 30, 10]
+print(len(my_list)) #find length of list
+print(my_list.index(10)) #find index of element that occurs first
+print(my_list.count(10)) #find count of the element
+print(sorted(my_list)) #print sorted list but not change original
+my_list.sort(reverse=True) #sort original list
+print(my_list)
+
 ```
 
   
@@ -127,6 +162,35 @@ Geeks
 Accessing element using negative indexing
 Geeks
 Geeks
+
+Some More Operations:
+[1, 2, 3]
+[1, 2, 3, [555, 12]]
+[1, 2, 3, [555, 12], 234, ‘more_example’]
+[1, ‘insert_example’, 2, 3, [555, 12], 234, ‘more_example’]
+
+[1, 2, 3, ‘example’, 3.132, 30]
+[1, 2, 3, 3.132, 30]
+Popped Element: 2 List remaining: [1, 3, 3.132, 30]
+[]
+
+1
+2
+3
+example
+3.132
+10
+30
+[1, 2, 3, ‘example’, 3.132, 10, 30]
+example
+[1, 2]
+[30, 10, 3.132, ‘example’, 3, 2, 1]
+
+6
+3
+2
+[1, 2, 3, 10, 10, 30]
+[30, 10, 10, 3, 2, 1]
 ```
 
 
@@ -169,6 +233,40 @@ print(Dict.get(1))
 myDict = {x: x**2 for x in [1,2,3,4,5]}
 print(myDict)
 
+
+# some more operations
+print("\n-----------Some More Operations:---------------")
+my_dict = {} #empty dictionary
+print(my_dict)
+my_dict = {1: 'Python', 2: 'Java'} #dictionary with elements
+print(my_dict)
+
+my_dict = {'First': 'Python', 'Second': 'Java'}
+print(my_dict)
+my_dict['Second'] = 'C++' #changing element
+print(my_dict)
+my_dict['Third'] = 'Ruby' #adding key-value pair
+print(my_dict)
+
+my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
+a = my_dict.pop('Third') #pop element
+print('Value:', a)
+print('Dictionary:', my_dict)
+b = my_dict.popitem() #pop the key-value pair
+print('Key, value pair:', b)
+print('Dictionary', my_dict)
+my_dict.clear() #empty dictionary
+print('n', my_dict)
+
+my_dict = {'First': 'Python', 'Second': 'Java'}
+print(my_dict['First']) #access elements using keys
+print(my_dict.get('Second'))
+
+my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
+print(my_dict.keys()) #get keys
+print(my_dict.values()) #get values
+print(my_dict.items()) #get key-value pairs
+print(my_dict.get('First'))
 ```
 
   
@@ -182,6 +280,38 @@ Geeks
 Accessing a element using get:
 [1, 2, 3, 4]
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+-----------Some More Operations:---------------
+
+{}
+{1: ‘Python’, 2: ‘Java’}
+
+{‘First’: ‘Python’, ‘Second’: ‘Java’}
+{‘First’: ‘Python’, ‘Second’: ‘C++’}
+{‘First’: ‘Python’, ‘Second’: ‘C++’, ‘Third’: ‘Ruby’}
+
+-------------  Deleting key, value pairs -----------------
+
+Value: Ruby
+Dictionary: {‘First’: ‘Python’, ‘Second’: ‘Java’}
+
+Key, value pair: (‘Second’, ‘Java’)
+Dictionary {‘First’: ‘Python’}
+
+{}
+
+---------------------------------------------------------
+
+Python
+Java
+
+---------------------------------------------------------
+
+dict_keys([‘First’, ‘Second’, ‘Third’])
+dict_values([‘Python’, ‘Java’, ‘Ruby’])
+dict_items([(‘First’, ‘Python’), (‘Second’, ‘Java’), (‘Third’, ‘Ruby’)])
+Python
+
 ```
 
 
@@ -199,7 +329,7 @@ In Python, tuples are created by placing a sequence of values separated by 'comm
  without the use of parentheses for grouping of the data sequence.
 
 
-****Note:**** Tuples can also be created with a single element, but it is a
+**Note:** Tuples can also be created with a single element, but it is a
  bit tricky. Having one element in the parentheses is not sufficient, there must be a trailing 'comma' to
  make it a tuple.
 
@@ -211,15 +341,13 @@ In Python, tuples are created by placing a sequence of values separated by 'comm
 # Creating a Tuple with
 # the use of Strings
 Tuple = ('Geeks', 'For')
-print("
-Tuple with the use of String: ")
+print("Tuple with the use of String: ")
 print(Tuple)
     
 # Creating a Tuple with
 # the use of list
 list1 = [1, 2, 4, 5, 6]
-print("
-Tuple using List: ")
+print("Tuple using List: ")
 Tuple = tuple(list1)
 
 # Accessing element using indexing
@@ -228,13 +356,31 @@ print(Tuple[0])
 
 # Accessing element from last
 # negative indexing
-print("
-Last element of tuple")
+print("Last element of tuple")
 print(Tuple[-1])
   
-print("
-Third last element of tuple")
+print("Third last element of tuple")
 print(Tuple[-3])
+
+# some more operations
+print("\n-----------Some More Operations:---------------")
+my_tuple2 = (1, 2, 3, 'edureka') #access elements
+for x in my_tuple2:
+    print(x)
+print(my_tuple2)
+print(my_tuple2[0])
+print(my_tuple2[:])
+print(my_tuple2[3][4])
+
+my_tuple = (1, 2, 3)
+my_tuple = my_tuple + (4, 5, 6) #add elements
+print(my_tuple)
+
+my_tuple = (1, 2, 3, ['hindi', 'python'])
+my_tuple[3][0] = 'english'
+print(my_tuple)
+print(my_tuple.count(2))
+print(my_tuple.index(['english', 'python']))
 
 ```
 
@@ -254,6 +400,24 @@ Last element of tuple
 
 Third last element of tuple
 4
+
+------------------------------------------------
+1
+2
+3
+edureka
+(1, 2, 3, ‘edureka’)
+1
+(1, 2, 3, ‘edureka’)
+e
+------------------------------------------------
+(1, 2, 3, 4, 5, 6)
+------------------------------------------------
+(1, 2, 3, [‘english’, ‘python’])
+1
+3
+------------------------------------------------
+
 ```
 
 
@@ -274,13 +438,13 @@ If Multiple values are present at the same index position, then the value is app
 
 
 
-****Set Implementation:****
+**Set Implementation:**
 
 
 ![Internal Working of Set](https://media.geeksforgeeks.org/wp-content/uploads/HashTable.png)
 
 
-****Sets with Numerous operations on a single HashTable:****
+**Sets with Numerous operations on a single HashTable:**
 
 
 ![Internal Working of Set](https://media.geeksforgeeks.org/wp-content/uploads/Hasing-Python.png)
@@ -294,21 +458,34 @@ If Multiple values are present at the same index position, then the value is app
 # a mixed type of values 
 # (Having numbers and strings) 
 Set = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks']) 
-print("
-Set with the use of Mixed Values") 
+print("Set with the use of Mixed Values") 
 print(Set) 
 
 # Accessing element using 
 # for loop 
-print("
-Elements of set: ") 
+print("Elements of set: ") 
 for i in Set: 
     print(i, end =" ") 
 print()
 
 # Checking the element 
 # using in keyword 
-print("Geeks" in Set) 
+print("Geeks" in Set)
+
+# some more operations
+print("\n-----------Some More Operations:---------------")
+my_set = {1, 2, 3}
+my_set.add(4) #add element to set
+print(my_set)
+
+my_set = {1, 2, 3, 4}
+my_set_2 = {3, 4, 5, 6}
+print(my_set.union(my_set_2), '----------', my_set | my_set_2)
+print(my_set.intersection(my_set_2), '----------', my_set & my_set_2)
+print(my_set.difference(my_set_2), '----------', my_set - my_set_2)
+print(my_set.symmetric_difference(my_set_2), '----------', my_set ^ my_set_2)
+my_set.clear()
+print(my_set)
 
 ```
 
@@ -322,6 +499,15 @@ Set with the use of Mixed Values
 Elements of set: 
 1 2 Geeks 4 6 For 
 True
+
+-----------Some More Operations:---------------
+{1, 2, 3, 4}
+
+{1, 2, 3, 4, 5, 6} ———- {1, 2, 3, 4, 5, 6}
+{3, 4} ———- {3, 4}
+{1, 2} ———- {1, 2}
+{1, 2, 5, 6} ———- {1, 2, 5, 6}
+set()
 ```
 
 
@@ -349,8 +535,7 @@ print(normal_set)
 # A frozen set
 frozen_set = frozenset(["e", "f", "g"])
 
-print("
-Frozen Set")
+print("Frozen Set")
 print(frozen_set)
 
 # Uncommenting below line would cause error as
@@ -381,7 +566,7 @@ Python
  character is simply a string with a length of 1\.
 
 
-****Note:**** As strings are immutable, modifying a string will result in
+**Note:** As strings are immutable, modifying a string will result in
  creating a new copy.
 
 
@@ -398,13 +583,11 @@ print("Creating String: ")
 print(String) 
     
 # Printing First character 
-print("
-First character of String is: ") 
+print("First character of String is: ") 
 print(String[0]) 
     
 # Printing Last character 
-print("
-Last character of String is: ") 
+print("Last character of String is: ") 
 print(String[-1]) 
 
 ```
@@ -443,19 +626,16 @@ print("Creating Bytearray:")
 print(a)
 
 # accessing elements
-print("
-Accessing Elements:", a[1])
+print("Accessing Elements:", a[1])
 
 # modifying elements 
 a[1] = 3
-print("
-After Modifying:")
+print("After Modifying:")
 print(a)
 
 # Appending elements
 a.append(30)
-print("
-After Adding Elements:")
+print("After Adding Elements:")
 print(a)
 
 ```
@@ -552,15 +732,13 @@ od['d'] = 4
 for key, value in od.items():
     print(key, value)
 
-print("
-After deleting:
+print("After deleting:
 ")
 od.pop('c')
 for key, value in od.items():
     print(key, value)
 
-print("
-After re-inserting:
+print("After re-inserting:
 ")
 od['c'] = 3
 for key, value in od.items():
@@ -1353,8 +1531,7 @@ print(stack.get())
 print(stack.get())
 print(stack.get())
 
-print("
-Empty: ", stack.empty())
+print("Empty: ", stack.empty())
 
 ```
 
@@ -1433,14 +1610,12 @@ print("Initial queue")
 print(queue)
 
 # Removing elements from the queue
-print("
-Elements dequeued from queue")
+print("Elements dequeued from queue")
 print(queue.pop(0))
 print(queue.pop(0))
 print(queue.pop(0))
 
-print("
-Queue after removing elements")
+print("Queue after removing elements")
 print(queue)
 
 # Uncommenting print(queue.pop(0))
@@ -1490,14 +1665,12 @@ print("Initial queue")
 print(q)
 
 # Removing elements from a queue
-print("
-Elements dequeued from the queue")
+print("Elements dequeued from the queue")
 print(q.popleft())
 print(q.popleft())
 print(q.popleft())
 
-print("
-Queue after removing elements")
+print("Queue after removing elements")
 print(q)
 
 # Uncommenting q.popleft()
@@ -1548,24 +1721,20 @@ q.put('g')
 
 # Return Boolean for Full
 # Queue
-print("
-Full: ", q.full())
+print("Full: ", q.full())
 
 # Removing element from queue
-print("
-Elements dequeued from the queue")
+print("Elements dequeued from the queue")
 print(q.get())
 print(q.get())
 print(q.get())
 
 # Return Boolean for Empty
 # Queue
-print("
-Empty: ", q.empty())
+print("Empty: ", q.empty())
 
 q.put(1)
-print("
-Empty: ", q.empty())
+print("Empty: ", q.empty())
 print("Full: ", q.full())
 
 # This would result into Infinite
@@ -1939,12 +2108,10 @@ root.left.right = Node(5)
 print("Preorder traversal of binary tree is")
 printPreorder(root)
 
-print("
-Inorder traversal of binary tree is")
+print("Inorder traversal of binary tree is")
 printInorder(root)
 
-print("
-Postorder traversal of binary tree is")
+print("Postorder traversal of binary tree is")
 printPostorder(root)
 
 ```

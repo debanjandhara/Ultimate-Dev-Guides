@@ -78,9 +78,10 @@ List elements can be accessed by the assigned index. In python starting index of
 ### ****Example: Python List Operations****
 
 
-```Python
-# Creating a List with 
-# the use of multiple values 
+
+#### ****Example: Creating a List with the use of multiple values****
+
+```Python 
 List = ["Geeks", "For", "Geeks"] 
 print("List containing multiple values: ") 
 print(List)
@@ -93,9 +94,9 @@ List containing multiple values:
 ['Geeks', 'For', 'Geeks']
 ```
 
-```Python
-# Creating a Multi-Dimensional List 
-# (By Nesting a list inside a List) 
+#### ****Example: Creating a Multi-Dimensional List (By Nesting a list inside a List)****
+
+```Python 
 List2 = [['Geeks', 'For'], ['Geeks']] 
 print("Multi-Dimensional List: ") 
 print(List2) 
@@ -108,9 +109,10 @@ Multi-Dimensional List:
 [['Geeks', 'For'], ['Geeks']]
 ```
 
-```Python
-# accessing a element from the  
-# list using index number 
+#### ****Example: Accessing a element from the list using index number****
+
+
+```Python 
 print("Accessing element from the list") 
 print(List[0])  
 print(List[2]) 
@@ -124,9 +126,9 @@ Geeks
 Geeks
 ```
 
-```Python
-# accessing a element using 
-# negative indexing 
+#### ****Example: Accessing a element using negative indexing****
+
+```Python 
 print("Accessing element using negative indexing") 
     
 # print the last element of list 
@@ -144,9 +146,10 @@ Geeks
 Geeks
 ```
 
+#### ****Example: Some more operations : Addition of Elements****
+
 ```Python
 # some more operations
-print("\nSome More Operations:")
 my_list = [1, 2, 3]
 print(my_list)
 my_list.append([555, 12]) # adds all the elements passed to it as a single element
@@ -166,6 +169,8 @@ Some More Operations:
 [1, 2, 3, [555, 12], 234, ‘more_example’]
 [1, ‘insert_example’, 2, 3, [555, 12], 234, ‘more_example’]
 ```
+
+#### ****Example: Some more operations : Deletion of Elements****
 
 ```Python
 my_list = [1, 2, 3, 'example', 3.132, 10, 30]
@@ -187,6 +192,8 @@ print(my_list)
 Popped Element: 2 List remaining: [1, 3, 3.132, 30]
 []
 ```
+
+#### ****Example: Some more operations : Slicing of Elements****
 
 ```Python
 my_list = [1, 2, 3, 'example', 3.132, 10, 30]
@@ -213,6 +220,8 @@ example
 [1, 2]
 [30, 10, 3.132, ‘example’, 3, 2, 1]
 ```
+
+#### ****Example: Some more operations : Extras****
 
 ```Python
 my_list = [1, 2, 3, 10, 30, 10]
@@ -255,9 +264,9 @@ Indexing of Python Dictionary is done with the help of keys. These are of any ha
 
 ### ****Example: Python Dictionary Operations****
 
+#### ****Example: Creating a Dictionary****
 
 ```Python
-# Creating a Dictionary
 Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]}
 print("Creating Dictionary: ")
 print(Dict)
@@ -270,8 +279,9 @@ Creating Dictionary:
 {'Name': 'Geeks', 1: [1, 2, 3, 4]}
 ```
 
-```Python
-# accessing a element using key 
+#### ****Example: Accessing a element using key****
+
+```Python 
 print("Accessing a element using key:") 
 print(Dict['Name']) 
 ``` 
@@ -283,9 +293,10 @@ Accessing a element using key:
 Geeks
 ```
 
-```Python
-# accessing a element using get() 
-# method 
+#### ****Example: Accessing a element using get() method****
+
+
+```Python 
 print("Accessing a element using get:") 
 print(Dict.get(1)) 
 ``` 
@@ -297,8 +308,10 @@ Accessing a element using get:
 [1, 2, 3, 4]
 ```
 
+#### ****Example: Dictionary Comprehension****
+
+
 ```Python
-# creation using Dictionary comprehension
 myDict = {x: x**2 for x in [1,2,3,4,5]}
 print(myDict)
 ``` 
@@ -309,8 +322,10 @@ print(myDict)
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 ```
 
+#### ****Example: Some More Operations****
+
+
 ```Python
-# some more operations
 my_dict = {} #empty dictionary
 print(my_dict)
 my_dict = {1: 'Python', 2: 'Java'} #dictionary with elements
@@ -323,6 +338,9 @@ print(my_dict)
 {}
 {1: ‘Python’, 2: ‘Java’}
 ```
+
+#### ****Example: Some More Operations : Modification****
+
 
 ```Python
 my_dict = {'First': 'Python', 'Second': 'Java'}
@@ -340,6 +358,9 @@ print(my_dict)
 {‘First’: ‘Python’, ‘Second’: ‘C++’}
 {‘First’: ‘Python’, ‘Second’: ‘C++’, ‘Third’: ‘Ruby’}
 ```
+
+#### ****Example: Some More Operations : Push, Pop, Clear****
+
 
 ```Python
 my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
@@ -365,6 +386,8 @@ Dictionary {‘First’: ‘Python’}
 {}
 ```
 
+#### ****Example: Some More Operations : Accessing Elements****
+
 ```Python
 my_dict = {'First': 'Python', 'Second': 'Java'}
 print(my_dict['First']) #access elements using keys
@@ -377,6 +400,8 @@ print(my_dict.get('Second'))
 Python
 Java
 ```
+
+#### ****Example: Some More Operations : Extras****
 
 ```Python
 my_dict = {'First': 'Python', 'Second': 'Java', 'Third': 'Ruby'}
@@ -418,10 +443,9 @@ In Python, tuples are created by placing a sequence of values separated by 'comm
 
 ### Example: Python Tuple Operations
 
+#### ****Example: Creating a Tuple with the use of Strings****
 
 ```Python
-# Creating a Tuple with
-# the use of Strings
 Tuple = ('Geeks', 'For')
 print("Tuple with the use of String: ")
 print(Tuple)
@@ -434,9 +458,9 @@ Tuple with the use of String:
 ('Geeks', 'For')
 ```
 
-```Python    
-# Creating a Tuple with
-# the use of list
+#### ****Example: Creating a Tuple with the use of List****
+
+```Python
 list1 = [1, 2, 4, 5, 6]
 print("Tuple using List: ")
 Tuple = tuple(list1)
@@ -446,12 +470,12 @@ Tuple = tuple(list1)
 
 ```
 Tuple using List: 
-First element of tuple
-1
 ```
 
-```Python  
-# Accessing element using indexing
+#### ****Example: Accessing element using Indexing****
+
+
+```Python
 print("First element of tuple")
 print(Tuple[0])
 ``` 
@@ -459,13 +483,14 @@ print(Tuple[0])
 **Output**
 
 ```
-Last element of tuple
-6
+First element of tuple
+1
 ```
 
-```Python  
-# Accessing element from last
-# negative indexing
+#### ****Example: Accessing element using Negative Indexing****
+
+
+```Python
 print("Last element of tuple")
 print(Tuple[-1])
   
@@ -476,13 +501,16 @@ print(Tuple[-3])
 **Output**
 
 ```
+Last element of tuple
+6
 Third last element of tuple
 4
 ```
 
+#### ****Example: Some More Operations****
+
+
 ```Python  
-# some more operations
-print("\n-----------Some More Operations:---------------")
 my_tuple2 = (1, 2, 3, 'edureka') #access elements
 for x in my_tuple2:
     print(x)
@@ -505,6 +533,9 @@ edureka
 e
 ```
 
+#### ****Example: Some More Operations : Addition****
+
+
 ```Python  
 my_tuple = (1, 2, 3)
 my_tuple = my_tuple + (4, 5, 6) #add elements
@@ -516,6 +547,9 @@ print(my_tuple)
 ```
 (1, 2, 3, 4, 5, 6)
 ```
+
+#### ****Example: Some More Operations : Extras****
+
 
 ```Python  
 my_tuple = (1, 2, 3, ['hindi', 'python'])
@@ -566,10 +600,10 @@ If Multiple values are present at the same index position, then the value is app
 ### Example: Python Set Operations
 
 
-```Python
-# Creating a Set with  
-# a mixed type of values 
-# (Having numbers and strings) 
+#### ****Example: Creating a Set with a mixed type of values (Having numbers and strings)****
+
+
+```Python 
 Set = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks']) 
 print("Set with the use of Mixed Values") 
 print(Set)
@@ -582,9 +616,10 @@ Set with the use of Mixed Values
 {1, 2, 'Geeks', 4, 6, 'For'}
 ```
 
-```Python
-# Accessing element using 
-# for loop 
+#### ****Example: Accessing element using for Loop****
+
+
+```Python 
 print("Elements of set: ") 
 for i in Set: 
     print(i, end =" ") 
@@ -598,9 +633,10 @@ Elements of set:
 1 2 Geeks 4 6 For 
 ```
 
-```Python
-# Checking the element 
-# using in keyword 
+#### ****Example: Checking the element using in keyword****
+
+
+```Python 
 print("Geeks" in Set)
 ``` 
 
@@ -610,8 +646,10 @@ print("Geeks" in Set)
 True
 ```
 
+#### ****Example: Some More Operations****
+
+
 ```Python
-# some more operations
 my_set = {1, 2, 3}
 my_set.add(4) #add element to set
 print(my_set)
@@ -622,6 +660,9 @@ print(my_set)
 ```
 {1, 2, 3, 4}
 ```
+
+#### ****Example: Some More Operations : Extras****
+
 
 ```Python
 my_set = {1, 2, 3, 4}
@@ -642,6 +683,15 @@ print(my_set)
 {1, 2} ———- {1, 2}
 {1, 2, 5, 6} ———- {1, 2, 5, 6}
 set()
+```
+
+#### ****Example: Some More Operations : Extras, Need to get output****
+
+
+```Python
+A <= B    # A is subset of B A <B>= B
+A > B     # A is proper superset of B
+a = {x for x in A if x not in 'abc'}   # Set Comprehension
 ```
 
 
@@ -856,8 +906,7 @@ An OrderedDict is also a sub\-class of dictionary but unlike a
 ```Python
 from collections import OrderedDict
 
-print("Before deleting:
-")
+print("Before deleting:")
 od = OrderedDict()
 od['a'] = 1
 od['b'] = 2
@@ -867,14 +916,12 @@ od['d'] = 4
 for key, value in od.items():
     print(key, value)
 
-print("After deleting:
-")
+print("After deleting:")
 od.pop('c')
 for key, value in od.items():
     print(key, value)
 
-print("After re-inserting:
-")
+print("After re-inserting:")
 od['c'] = 3
 for key, value in od.items():
     print(key, value)

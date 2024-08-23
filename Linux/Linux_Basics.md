@@ -445,3 +445,33 @@ sudo certbot --nginx -d domain.com -d www.domain.com
 ```bash
 git pull https://<username_self/other>:<token_key_self/other>@github.com/debanjandhara/the_art_story_chatbot.git
 ```
+
+
+### Configure your backend at Niginx, without API Prefix
+
+```nginx
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name www.galva.ai 74.249.28.101;
+
+    ssl_certificate /etc/letsencrypt/live/galva.ai/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/galva.ai/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
+
+        # Strip /api from the URI before forwarding it to FastAPI
+        rewrite ^/api(/.*)$ $1 break;
+    }
+
+}
+```

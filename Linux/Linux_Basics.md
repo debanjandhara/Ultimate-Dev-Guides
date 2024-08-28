@@ -475,3 +475,68 @@ server {
 
 }
 ```
+
+## When you are facing problem to access Swagger UI, without any changes towards dev side : 
+
+```nginx
+# Serve www.galva.ai over HTTPS (frontend and backend)
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    server_name www.galva.ai 74.249.28.101;
+
+    ssl_certificate /etc/letsencrypt/live/galva.ai/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/galva.ai/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # Frontend
+    location / {
+        proxy_pass http://172.18.0.3:80;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # Backend API
+    location /api/ {
+        proxy_pass http://172.18.0.2:8003;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
+
+    }
+
+    # Backend - Swagger UI API
+    location /docs {
+        proxy_pass http://172.18.0.2:8003/docs;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
+
+    }
+
+    # Backend - Swagger UI API - Openapi.json - Dependency
+    location /openapi.json {
+        proxy_pass http://172.18.0.2:8003/openapi.json;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_buffering off;
+
+    }
+}
+
+```
+
+The IPs that I have got here, is from the Docker Service

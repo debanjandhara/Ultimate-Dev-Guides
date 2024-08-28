@@ -12,7 +12,8 @@ for i from 0 to n-1:
     for j from i+1 to n:
         if array[j] < array[min_index]:
             min_index = j
-    swap(array[i], array[min_index])
+    if (min_index != i):
+        swap(array[i], array[min_index])
 ```
 
 ### Visualization
@@ -29,13 +30,11 @@ Insertion Sort builds the sorted array one element at a time by repeatedly picki
 
 ### Pseudo Code
 ```
-for i from 1 to n-1:
-    key = array[i]
-    j = i - 1
-    while j >= 0 and array[j] > key:
-        array[j + 1] = array[j]
+for i from 1 to len(A)-1:
+    j = i
+    while j > 0 and A[j-1] > A[j]:
+        swap A[j] and A[j-1]
         j = j - 1
-    array[j + 1] = key
 ```
 
 ### Visualization
@@ -52,8 +51,8 @@ Bubble Sort repeatedly steps through the list, compares adjacent elements, and s
 
 ### Pseudo Code
 ```
-for i from 0 to n-1:
-    for j from 0 to n-i-1:
+for i from 1 to N:
+    for j from 0 to N-i-1:
         if array[j] > array[j + 1]:
             swap(array[j], array[j + 1])
 ```

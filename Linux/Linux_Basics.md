@@ -540,3 +540,17 @@ server {
 ```
 
 The IPs that I have got here, is from the Docker Service
+
+## Host Static Site in Nginx
+
+```nginx
+server {
+    listen 80;
+    server_name your_domain.com;
+    root /var/www/html/your_build_directory;
+    index index.html;
+    location / {
+        try_files $uri /index.html;
+    }
+}
+```

@@ -161,11 +161,11 @@ return_type recursive_function(parameters) {
 ```
 
 ### 5. Pass by Value and Pass by Reference
-> Pass by Value: Only a copy of the variable is passed, changes don't affect the original.
+> **Pass by Value**: Only a copy of the variable is passed, changes don't affect the original.
 ```cpp
 void passByValue(int num);
 ```
-> Pass by Reference: A reference to the variable is passed, changes directly affect the original.
+> **Pass by Reference**: A reference to the variable is passed, changes directly affect the original.
 ```cpp
 void passByReference(int& num);
 ```

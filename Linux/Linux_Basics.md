@@ -554,3 +554,56 @@ server {
     }
 }
 ```
+
+Cron Jobs : 
+
+```bash
+0 0 */28 * * /home/azureuser/renew_cert.sh >> /home/azureuser/renew_cert.log 2>&1
+0 1 * * * /home/azureuser/random_git_update.sh >> /home/azureuser/random_git_update.log 2>&1
+```
+/home/azureuser/renew_cert.sh : 
+
+```bash
+#!/bin/bash
+
+# Stop Nginx
+sudo systemctl stop nginx
+
+# Renew certificates
+sudo certbot renew
+
+# Start Nginx
+sudo systemctl start nginx
+```
+
+/home/azureuser/random_git_update.sh : 
+
+```bash
+#!/bin/bash
+
+# Function to generate a random number between a range
+random_between() {
+  shuf -i "$1"-"$2" -n 1
+}
+
+# Select a random number of times to run the tasks: 2, 3, 5, or 8
+TIMES=$(shuf -e 2 2 2 2 2 3 3 3 3 3 4 5 6 7 8 -n 1)
+
+# Change to the git repository directory
+cd /home/azureuser/debanjan || exit
+
+for ((i = 0; i < TIMES; i++)); do
+  # Add random information to the sample.txt file
+  echo "Random information $(date)" | sudo tee -a sample.txt
+
+  # Stage the changes
+  sudo git add .
+
+  # Commit the changes with a random message
+  COMMIT_MSG="Random commit message $(date)"
+  sudo git commit -m "$COMMIT_MSG"
+
+  # Push the changes to the main branch
+  sudo git push origin main
+done
+```

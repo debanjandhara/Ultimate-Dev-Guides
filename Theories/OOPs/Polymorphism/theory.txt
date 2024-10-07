@@ -1,0 +1,24 @@
+Polymorphism: 
+Polymorphism is one of the most important concepts in OOP. It describes the ability of something to have or to be displayed in more than one form. The different forms arise because these entities can be assigned different meanings and used in various ways in multiple contexts.
+
+Types of Polymorphism
+
+->Compile-time Polymorphism:
+Compile time polymorphism is a type of polymorphism occurring when the method call gets resolved during compile time. Compile time polymorphism is achieved with the help of method overloading and operator overloading. 
+
+1.Function/method Overloading:
+When there are multiple functions with the same name but different parameters, then the functions are said to be overloaded, hence this is known as Function Overloading. 
+Functions can be overloaded by changing the number of arguments or/and changing the type of arguments. 
+
+2. Operator Overloading:
+C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. 
+For example, we can make use of the addition operator (+) for string class to concatenate two strings. 
+
+->Runtime Polymorphism:
+Run time polymorphism is a type of polymorphism in OOPS which is resolved during runtime. This is generally achieved with the help of method overriding.
+Method overriding is used to implement a method that is already defined in its parent class or super class. Runtime polymorphism in oops is also known as dynamic binding or late binding. 
+
+Function Overriding:
+Function Overriding occurs when a derived class has a definition for one of the member functions of the base class. That base function is said to be overridden.
+
+Virtual function: A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overridden) in the derived class.

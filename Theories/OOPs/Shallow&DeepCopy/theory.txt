@@ -1,0 +1,8 @@
+Shallow & Deep copy:
+
+A shallow copy of an object copies all of the member values from one object to another
+This works well if none of the variables of the object are defined in the heap section of memory but if some variables are dynamically allocated memory from heap section, then the copied object variable will also reference the same memory location.
+This will create ambiguity and run-time errors, dangling pointer. Since both objects will reference to the same memory location, then change made by one will reflect those change in another object as well. Since we wanted to create a replica of the object, this purpose will not be filled by Shallow copy. 
+
+A deep copy not only copies the member values but also makes copies of any dynamically allocated memory that the members points to.
+In order to perform Deep copy, we need to explicitly define the copy constructor and assign dynamic memory as well, if required. Also, it is required to dynamically allocate memory to the variables in the other constructors, as well.

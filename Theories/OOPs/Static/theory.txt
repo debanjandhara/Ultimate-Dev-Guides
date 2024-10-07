@@ -1,0 +1,30 @@
+Static variables:
+Variables declared as static in a function are created & initialised once for the lifetime of the program.(in function)
+
+Static variables in a class are created & initialised once . They are shared by all the objects of the class.(in class)
+
+Static objects:
+
+Static objects refer to objects that have static lifetime and storage. When a member variable or a method is marked as static in a class, it behaves differently compared to non-static members. 
+
+Static Member Functions:
+
+Static member functions are functions that can be called on the class itself, without creating an instance of the class.
+
+Key Points to Remember:
+
+1.Static variables:
+
+Belong to the class, not to individual objects.
+Only one copy is shared across all objects.
+Must be initialized outside the class.
+
+2.Static Member Functions:
+
+Can be called using the class name without creating objects.
+Can access only static variables or other static functions.
+
+3.Static Objects:
+
+Have a lifetime that persists until the program ends.
+Are created only once, regardless of how many times the function they are declared in is called.

@@ -1,0 +1,16 @@
+Resources:
+
+1. Interview Purpose:
+   a. https://drive.google.com/file/d/1kksqpGT_YBQsFwsyVyftikPRP-sZZF-e/view
+
+   b.https://www.geeksforgeeks.org/last-minute-notes-operating-systems/
+
+   c.https://www.interviewbit.com/operating-system-interview-questions/
+
+   d. https://www.geeksforgeeks.org/operating-systems-interview-questions/
+
+2. https://github.com/avgspacelover/Subjective-studies_OS-CN-DBMS/blob/main/Bedtime%20Stories%20on%20Operating%20Systems.pdf
+
+
+
+

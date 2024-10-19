@@ -1,0 +1,24 @@
+Data vs Information
+a. Data is a collection of facts, while information puts those facts into context.
+b. While data is raw and unorganized, information is organized.
+c. Data points are individual and sometimes unrelated. Information maps out that data to provide a
+big-picture view of how it all fits together.
+d. Data, on its own, is meaningless. When it’s analyzed and interpreted, it becomes meaningful
+information.
+e. Data does not depend on information; however, information depends on data.
+f. Data typically comes in the form of graphs, numbers, figures, or statistics. Information is typically
+presented through words, language, thoughts, and ideas.
+g. Data isn’t sufficient for decision-making, but you can make decisions based on information
+
+DBMS: A database management system (DBMS) is a software system for creating and managing databases.
+A DBMS enables end users to create, protect, read, update and delete data in a database. It also manages security, data integrity and concurrency for databases.
+
+DBMS vs File Systems (adv of dbms)
+a. File-processing systems has major disadvantages.
+i. Data Redundancy and inconsistency
+ii. Difficulty in accessing data
+iii. Data isolation
+iv. Integrity problems
+v. Atomicity problems
+vi. Concurrent-access anomalies
+vii. Security problems

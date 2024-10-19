@@ -1,0 +1,31 @@
+What is Normalisation: 
+Normalization is the process to eliminate data redundancy and enhance data integrity in the table. Normalization also helps to organize the data in the database. It is a multi-step process that sets the data into tabular form and removes the duplicated data from the relational tables.
+
+Normalization organizes the columns and tables of a database to ensure that database integrity constraints properly execute their dependencies. It is a systematic technique of decomposing tables to eliminate data redundancy (repetition) and undesirable characteristics like Insertion, Update, and Deletion anomalies.
+
+1st Normal Form (1NF):
+
+A table is referred to as being in its First Normal Form if atomicity of the table is 1.
+Here, atomicity states that a single cell cannot hold multiple values. It must hold only a single-valued attribute.
+The First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+
+2NF:
+1. Relation must be in 1NF.
+2. There should not be any partial dependency.
+1. All non-prime attributes must be fully dependent on PK.
+2. Non prime attribute can not depend on the part of the PK.
+
+3NF:
+1. Relation must be in 2NF.
+2. No transitivity dependency exists.
+1. Non-prime attribute should not depend on a non-prime attribute.
+
+BCNF (Boyce-Codd normal form):
+1. Relation must be in 3NF.
+2. FD: A -> B, A must be a super key.
+3. We must not derive prime attribute from any prime or non-prime attribute
+
+Advantages of Normalisation
+1. Normalisation helps to minimise data redundancy.
+2. Greater overall database organisation.
+3. Data consistency is maintained in DB

@@ -1,0 +1,33 @@
+Clustering in Database:
+
+Database clustering combines multiple databases or database nodes into a single, unified system. This technique distributes data and workload across multiple servers to enhance performance, scalability, and availability. By spreading the load, clustering ensures that your system can handle more users and data without slowing down or crashing. 
+
+Each node in the cluster works together, sharing the workload and providing redundancy, so if one node fails, others can take over, ensuring continuous operation. This means fewer headaches for you when things go wrong.
+
+Advantages:
+
+1. Data Redundancy: Clustering of databases helps with data redundancy, as we store the same data at multiple servers. Don’t confuse this
+data redundancy as repetition of the same data that might lead to some anomalies. The redundancy that clustering offers is required and is
+quite certain due to the synchronisation. In case any of the servers had to face a failure due to any possible reason, the data is available at other
+servers to access.
+2. Load balancing: or scalability doesn’t come by default with the database. It has to be brought by clustering regularly. It also depends on the
+setup. Basically, what load balancing does is allocating the workload among the different servers that are part of the cluster. This indicates that
+more users can be supported and if for some reasons if a huge spike in the traffic appears, there is a higher assurance that it will be able to
+support the new traffic. One machine is not going to get all of the hits. This can provide scaling seamlessly as required. This links directly to
+high availability. Without load balancing, a particular machine could get overworked and traffic would slow down, leading to decrement of
+the traffic to zero.
+3. High availability: When you can access a database, it implies that it is available. High availability refers the amount of time a database is
+considered available. The amount of availability you need greatly depends on the number of transactions you are running on your database
+and how often you are running any kind of analytics on your data. With database clustering, we can reach extremely high levels of availability
+due to load balancing and have extra machines. In case a server got shut down the database will, however, be available.
+
+How does Clustering Work?
+In cluster architecture, all requests are split with many computers so that an individual user request is executed and produced by a number of
+computer systems. The clustering is serviceable definitely by the ability of load balancing and high-availability. If one node collapses, the
+request is handled by another node. Consequently, there are few or no possibilities of absolute system failures.
+
+Sharding in DBMS:
+https://www.geeksforgeeks.org/what-is-sharding/
+
+What are the differences between sharding and partitioning?
+While sharding and partitioning share the common goal of dividing a large database into smaller ones, they have different approaches to achieve this. When sharding a database, the data is distributed across multiple servers, resulting in new tables spread across these servers. On the other hand, partitioning involves splitting tables within the same database instance. Sharding is referred to as horizontal scaling, and it makes it easier to scale as you can increase the number of machines to handle user traffic as it increases. Partitioning splits based on the column value(s). All columns should be retained when partitioned – just different rows will be in different tables. It is also easier to manage data with partitioning, as all partitions are in one database instance.

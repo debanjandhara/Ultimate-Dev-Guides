@@ -88,6 +88,21 @@ Here:
 - `TextBox` and `DropDownList` inherit common properties from `HTMLElement`.
 - **Benefit:** Eliminates redundant code by defining shared attributes and behaviors in the parent class.
 
+### Another Example:
+```python
+class Animal:
+    def eat(self):
+        print("Eating")
+
+class Dog(Animal):  # Dog inherits from Animal
+    def bark(self):
+        print("Barking")
+
+dog = Dog()
+dog.eat()  # Inherited method
+dog.bark()  # Own method
+```
+
 ---
 
 ## 4. Polymorphism 🦋
@@ -116,6 +131,25 @@ class DropDownList(HTMLElement):
 Here:
 - Each `render` method behaves differently, based on the specific element.
 - **Benefit:** Reduces reliance on conditional logic (like `if` or `switch` statements) by letting each object handle its unique behavior.
+
+### Another Example:
+```python
+class Shape:
+    def draw(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Circle(Shape):
+    def draw(self):
+        print("Drawing Circle")
+
+class Square(Shape):
+    def draw(self):
+        print("Drawing Square")
+
+shapes = [Circle(), Square()]
+for shape in shapes:
+    shape.draw()
+```
 
 ---
 

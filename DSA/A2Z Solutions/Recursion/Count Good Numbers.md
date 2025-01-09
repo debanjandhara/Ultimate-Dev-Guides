@@ -91,8 +91,9 @@ class Solution:
 
 2. **Binary Exponentiation**:
    - Always use binary exponentiation for large powers to ensure efficiency:
-     ![If n is even: x^n = (x^2)^{n/2}](https://latex.codecogs.com/svg.latex?%5Ctext%7BIf%20n%20is%20even%3A%20x%5En%20%3D%20%28x%5E2%29%5E%7Bn%2F2%7D)
-     ![If n is odd: x^n = x \times (x^2)^{n/2}](https://latex.codecogs.com/svg.latex?%5Ctext%7BIf%20n%20is%20odd%3A%20x%5En%20%3D%20x%20%5Ctimes%20%28x%5E2%29%5E%7Bn%2F2%7D)
+     ![If n is even: \( x^n = (x^2)^{n/2} \)](https://latex.codecogs.com/svg.latex?%5Ctext%7BIf%20n%20is%20even%3A%20x%5En%20%3D%20%28x%5E2%29%5E%7Bn%2F2%7D)
+     ![If n is odd: \( x^n = x \times (x^2)^{n/2} \)](https://latex.codecogs.com/svg.latex?%5Ctext%7BIf%20n%20is%20odd%3A%20x%5En%20%3D%20x%20%5Ctimes%20%28x%5E2%29%5E%7Bn%2F2%7D)
+
 
 3. **Modulo Property**:
    - Remember to reduce results modulo ![10^9 + 7](https://latex.codecogs.com/svg.latex?10%5E9%20%2B%207) after every operation:

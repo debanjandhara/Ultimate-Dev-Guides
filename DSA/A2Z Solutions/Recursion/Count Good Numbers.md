@@ -1,4 +1,6 @@
-Here's the Markdown format where all formulas and single words within `$$latex$$` are replaced with LaTeX image links. The image links are useful for displaying mathematical expressions in GitHub repositories.
+Jump to : https://leetcode.com/problems/count-good-numbers/solutions/6253377/recent-hot-ultimate-guide-easy-explain-l-0t9w
+
+This contains proper formatting
 
 ---
 

@@ -1,0 +1,27 @@
+Architecture refers to the overall design and organization of the database. The three schema architecture separates the logical and physical aspects of the DBMS. This allows changing one layer of the database without affecting the other layers. It also helps to maintain data integrity and consistency.
+
+The three layers of a three-schema architecture are:
+
+External layer 
+Conceptual layer
+Internal layer 
+
+
+Schema:
+Schema is structural description of data. Schema doesn’t change frequently. Data may change
+frequently.
+DB schema corresponds to the variable declarations (along with type) in a program.
+We have 3 types of Schemas: Physical, Logical, several view schemas called subschemas.
+
+External/view Schema:
+In DBMS, the External layer provides a logical view of the database. The External layer is the database portion that users can access and use. It is the topmost layer designed to provide a user-friendly database interface. 
+
+Let us understand this through an example of an Employee Management system, where an employee login into the system, and the system shows the employee’s details.
+
+Conceptual/logical schema:
+The Conceptual schema is the database section that tells the difference between all the different data sets. It represents the structure of a database. In an employee database, it describes columns or attributes of the table.
+
+It can also be called a high-level representation of a database. The conceptual schema is mostly represented by the Entity-relationship Model ( ER Model ), which uses symbols to represent the data elements and relationships visually for a specific system. In an ER Model, the database is represented by ER Diagram.
+
+Internal/physical schema 
+The Internal schema, also known as Physical Schema, is a database section where all the data is kept and arranged. Here we need to decide where data should be stored and how it should be stored. 

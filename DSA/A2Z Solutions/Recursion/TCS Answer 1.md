@@ -48,9 +48,7 @@ The problem can be tackled using **Bitmask Dynamic Programming**. This technique
      - Include it in the subset (if no conflicts and budget allows), or  
      - Exclude it.  
    - Recurrence:  
-     $
-     dp[mask | (1 << i)][remaining\_budget - \text{cost}[i]] = \max(dp[mask][remaining\_budget] + \text{worth}[i], dp[mask][remaining\_budget])
-     $
+     $dp[mask | (1 << i)][remaining\_budget - \text{cost}[i]] = \max(dp[mask][remaining\_budget] + \text{worth}[i], dp[mask][remaining\_budget])$
 
 3. **Handle Contradictions**:  
    - For each `mask`, ensure that no two strings in `mask` are contradictory using the conflict graph.

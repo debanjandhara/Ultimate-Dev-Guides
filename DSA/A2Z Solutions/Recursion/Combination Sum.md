@@ -1,5 +1,4 @@
-https://leetcode.com/problems/combination-sum/solutions/6253958/recent-ultimate-guide-easy-explain-like-g9wot
-
+https://leetcode.com/problems/combination-sum/solutions/6254030/recent-_-hot-v2-ultimate-guide-easy-expl-aybc
 
 ### Guide to Solving "Combination Sum" Problem
 
@@ -51,9 +50,7 @@ Think of it as "cleaning up" after a recursive call to maintain the integrity of
 
 Here’s how the recursion tree looks for candidates `[2, 3, 6, 7]` and target `7`. Each node shows the current index, remaining target, and the result list:
 
-```mermaid
-<!-- Placeholder for the recursion stack tree image -->
-```
+![Combination Sum Mermaid Diagram](https://github.com/user-attachments/assets/d4bb3814-086f-4120-8b16-b5ebba0c70a8)
 
 This tree illustrates all possible paths explored during the recursion process.
 

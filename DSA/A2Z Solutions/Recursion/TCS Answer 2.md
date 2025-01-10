@@ -105,3 +105,190 @@ def minimum_time_and_strength(N, M, shark_strength, time_cost, K, start, end):
    - Problem: Balancing two criteria during pathfinding.
 3. **Minimum Effort Path**:
    - Problem: Similar grid traversal with constraints.
+
+---
+
+Here’s the C++ implementation of the algorithm described for solving the **Shark-Infested Island Escape** problem:
+
+---
+
+### **C++ Implementation**
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <tuple>
+#include <limits>
+
+using namespace std;
+
+struct State {
+    int time, strength, x, y;
+    bool operator<(const State& other) const {
+        return time > other.time; // Min-heap based on time
+    }
+};
+
+string solve(int N, int M, vector<vector<int>>& sharkStrength, vector<vector<int>>& timeCost, int K, pair<int, int> start, pair<int, int> destination) {
+    // Directions for moving up, down, left, right
+    vector<pair<int, int>> directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
+    // Min-heap priority queue: {time, strength, x, y}
+    priority_queue<State> pq;
+
+    // Visited array: visited[x][y][strength]
+    vector<vector<vector<bool>>> visited(N, vector<vector<bool>>(M, vector<bool>(K + 1, false)));
+
+    // Push the initial state: (time = 0, strength = K, position = start)
+    pq.push({0, K, start.first, start.second});
+
+    while (!pq.empty()) {
+        auto [current_time, current_strength, x, y] = pq.top();
+        pq.pop();
+
+        // If we reach the destination with valid strength
+        if (x == destination.first && y == destination.second && current_strength >= 0) {
+            return to_string(current_time) + " " + to_string(current_strength);
+        }
+
+        // Skip if this state has already been processed
+        if (visited[x][y][current_strength]) {
+            continue;
+        }
+
+        // Mark the state as visited
+        visited[x][y][current_strength] = true;
+
+        // Explore all possible moves
+        for (auto& dir : directions) {
+            int nx = x + dir.first, ny = y + dir.second;
+
+            // Check if the neighbor is within bounds
+            if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
+                int new_time = current_time + timeCost[nx][ny];
+                int new_strength = current_strength - (1 + sharkStrength[nx][ny]);
+
+                // If the new state is valid, push it to the priority queue
+                if (new_strength >= 0 && !visited[nx][ny][new_strength]) {
+                    pq.push({new_time, new_strength, nx, ny});
+                }
+            }
+        }
+    }
+
+    // If no feasible path is found
+    return "Not Possible";
+}
+
+int main() {
+    // Input
+    int N, M;
+    cin >> N >> M;
+
+    vector<vector<int>> sharkStrength(N, vector<int>(M));
+    pair<int, int> start, destination;
+
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            string cell;
+            cin >> cell;
+            if (cell == "S") {
+                start = {i, j};
+                sharkStrength[i][j] = 0;
+            } else if (cell == "D") {
+                destination = {i, j};
+                sharkStrength[i][j] = 0;
+            } else {
+                sharkStrength[i][j] = stoi(cell);
+            }
+        }
+    }
+
+    vector<vector<int>> timeCost(N, vector<int>(M));
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            cin >> timeCost[i][j];
+        }
+    }
+
+    int K;
+    cin >> K;
+
+    // Solve and output the result
+    cout << solve(N, M, sharkStrength, timeCost, K, start, destination) << endl;
+
+    return 0;
+}
+```
+
+---
+
+### **How It Works**
+
+1. **Input Parsing**:
+   - Read the grid dimensions $N, M$.
+   - Parse the `sharkStrength` grid, identifying the `S` (start) and `D` (destination) cells.
+   - Parse the `timeCost` grid.
+   - Read the initial strength $K$.
+
+2. **Algorithm Execution**:
+   - Use a **priority queue** (min-heap) to process states in increasing order of time.
+   - Track visited states using a 3D vector to avoid reprocessing.
+
+3. **State Transition**:
+   - For each state, explore all valid neighbors.
+   - Calculate the new time and strength for each move.
+   - If the move is valid (non-negative strength and unvisited), push it to the priority queue.
+
+4. **Output**:
+   - If the destination is reached with valid strength, print the time and remaining strength.
+   - If no feasible path exists, print "Not Possible".
+
+---
+
+### **Example Input/Output**
+
+#### **Input 1**
+```
+3 4
+0 1 4 3
+S 1 1 2
+1 2 5 D
+10 6 5 9
+0 5 4 9
+2 3 7 8
+10
+```
+
+#### **Output 1**
+```
+26 2
+```
+
+#### **Input 2**
+```
+3 4
+0 3 5 1
+2 S 4 D
+2 1 8 1
+5 10 2 12
+4 0 5 11
+2 7 7 8
+5
+```
+
+#### **Output 2**
+```
+Not Possible
+```
+
+---
+
+### **Complexity Analysis**
+1. **Time Complexity**:  
+   $O(N \times M \times K \log(N \times M \times K))$, where $K$ is the initial strength, $N \times M$ is the grid size, and the logarithmic factor comes from the priority queue.
+
+2. **Space Complexity**:  
+   $O(N \times M \times K)$ for the `visited` array and priority queue.
+
+

@@ -1,10 +1,10 @@
 ### Solution to Problem 1922: Count Good Numbers
 
-This problem involves finding the total number of "good digit strings" of length$n$, where:
+This problem involves finding the total number of "good digit strings" of length $n$, where:
 1. Digits at even indices must be **even** (choices: $0, 2, 4, 6, 8$).
 2. Digits at odd indices must be **prime** (choices: $2, 3, 5, 7$).
 
-Since the result can be very large, you are required to return the result modulo$10^9 + 7$.
+Since the result can be very large, you are required to return the result modulo $10^9 + 7$.
 
 ---
 
@@ -13,7 +13,7 @@ Since the result can be very large, you are required to return the result modulo
 #### 1. **Breaking Down the Problem:**
 - If $n$ is the length of the string:
   - Half of the positions (or $n // 2$) will be even indices (let's call this $E$).
-  - The remaining positions (or$n // 2$) will be odd indices (let's call this $O$).
+  - The remaining positions (or $n // 2$) will be odd indices (let's call this $O$).
   - If $n$ is odd, $E = n // 2 + 1$ and $O = n // 2$.
   
 - At each **even index**, there are $5$ valid choices (even digits).

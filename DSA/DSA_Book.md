@@ -41,7 +41,8 @@ These companies highly value strong foundational knowledge in DSA. This guide wi
   - [3.2 Tuples (Immutable Sequences)](#32-tuples-immutable-sequences)
   - [3.3 Dictionaries (Hash Maps/Hash Tables)](#33-dictionaries-hash-maps--hash-tables)
   - [3.4 Sets (Hash Sets)](#34-sets-hash-sets)
-  - [3.5 Strings (Immutable Character Sequences)](#35-strings-immutable-character-sequences)
+  - [3.5 Pattern Printing](#35-pattern-printing)
+  - [3.6 Strings (Immutable Character Sequences)](#36-strings-immutable-character-sequences)
 - [Chapter 4: Arrays / Lists in Python](#chapter-4-arrays--lists-in-python)
   - [4.1 Concept & Python's `list`](#41-concept--pythons-list)
   - [4.2 Basic Operations & Their Complexities](#42-basic-operations--their-complexities)
@@ -411,7 +412,11 @@ _(This chapter connects theoretical DSA concepts to Python's practical implement
   - `len(my_set)`: O(1)
   - Set operations (union, intersection, difference): Generally O(len(s1) + len(s2)) or proportional to the size of the sets involved.
 
-### 3.5 Strings (Immutable Character Sequences)
+### 3.5 Pattern Printing
+
+https://www.wscubetech.com/resources/python/programs/pattern
+
+### 3.6 Strings (Immutable Character Sequences)
 
 - **DSA Concept:** Sequence of characters, often implemented as an array of characters.
 - **Python `str`:** Immutable sequence of Unicode characters.

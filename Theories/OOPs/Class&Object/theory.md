@@ -54,4 +54,4 @@ Functions that define the behavior of a class. They allow interaction with attri
 
 ### Constructor:
 
-A constructor initializes the class object. It is executed when a new object is
+A constructor initializes the class object. It is executed when a new object is initialized.

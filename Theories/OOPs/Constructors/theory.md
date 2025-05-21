@@ -24,19 +24,19 @@ A **constructor** is a special method that is invoked automatically at the time 
 ```
 
 2.  Defining the Constructor Outside the Class
-    <class-name> {
 
+```cpp
+    <class-name> {
         // Declaring the constructor
         // Definiton will be provided outside
         <class-name>();
-
         // Defining remaining class
-
     }
 
-<class-name>: :<class-name>(list-of-parameters) {
-// constructor definition
-}
+    <class-name>: :<class-name>(list-of-parameters) {
+    // constructor definition
+    }
+```
 
 ### Types of Constructors in C++:
 

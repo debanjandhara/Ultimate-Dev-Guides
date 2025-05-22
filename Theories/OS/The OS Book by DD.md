@@ -3,251 +3,256 @@
 
 ## Index
 
-- [Chapter 1: Quick Notes to Follower](#chapter-1-quick-notes-to-follower)
-- [Chapter 2: Overview](#chapter-2-overview)
-  - [2.1 What is an Operating System ?](#21-what-is-an-operating-system)
-  - [2.2 Services provided by an Operating System](#22-services-provided-by-an-operating-system)
-  - [2.3 Types of OS](#23-types-of-os)
-    - [Batched OS](#batched-os)
-    - [Time Sharing OS](#time-sharing-os)
-    - [Distributed OS](#distributed-os)
-    - [Network OS](#network-os)
-    - [Real Time OS](#real-time-os)
-  - [2.4 RAM vs ROM](#24-ram-vs-rom)
-  - [2.5 SRAM vs DRAM](#25-sram-vs-dram)
-  - [2.6 PROM, EPROM & EEPROM](#26-prom-eprom-and-eeprom)
-  - [2.7 Virtualization vs Containerization](#27-virtualization-vs-containerization)
-  - [2.8 BIOS vs UEFI](#28-bios-vs-uefi)
-  - [2.9 MBR vs GPT](#29-mbr-vs-gpt)
-  - [2.10 Important terms to know](#210-important-terms-to-know)
-    - [Compiler](#compiler)
-    - [Loader](#loader)
-    - [Assembler](#assembler)
-    - [Interpreter](#interpreter)
-    - [System Calls](#system-calls)
-    - [Application Programming Interface](#application-programming-interface)
-    - [Kernel](#kernel)
-    - [Shell](#shell)
-    - [JVM](#jvm)
-    - [Booting](#booting)
-  - [2.11 MultiProgramming, MultiProcessing, MultiTasking & Multithreading (Software)](#211-multiprogramming-multiprocessing-multitasking-and-multithreading-software)
-  - [2.12 Monolithic architecture vs MicroKernel](#212-monolithic-architecture-vs-microkernel)
-  - [2.13 Why Windows kernel is more monolithic & not microkernel ?](#213-why-windows-kernel-is-more-monolithic-and-not-microkernel)
-  - [2.14 What happens when we turn on our Computer ?](#214-what-happens-when-we-turn-on-our-computer)
-- [Chapter 3: Process Concept](#chapter-3-process-concept)
-  - [3.1 Process vs Program](#31-process-vs-program)
-  - [3.2 Different State of process](#32-different-state-of-process)
-  - [3.3 Types of Process ?](#33-types-of-process)
-    - [CPU Bound Process vs I/O Bound Process](#cpu-bound-process-vs-i-o-bound-process)
-  - [3.4 PCB structure in detail](#34-pcb-structure-in-detail)
-  - [3.5 How does a process gets created in memory](#35-how-does-a-process-gets-created-in-memory)
-  - [3.6 Process vs Threads](#36-process-vs-threads)
-  - [3.7 Context Switching](#37-context-switching)
-    - [What is a Context Switch ?](#what-is-a-context-switch)
-    - [Introduction](#introduction)
-  - [3.8 IPC](#38-ipc)
-    - [by Shared Memory](#by-shared-memory)
-    - [by Message Passing](#by-message-passing)
-  - [3.9 Orphan Process](#39-orphan-process)
-  - [3.10 Zombie Process](#310-zombie-process)
-    - [Maximum number of Zombie processes a system can have ?](#maximum-number-of-zombie-processes-a-system-can-have)
-  - [3.11 Scheduling Queues](#311-scheduling-queues)
-    - [Introduction](#introduction-1)
-    - [Job Queue](#job-queue)
-    - [Ready Queue](#ready-queue)
-    - [Device Queues](#device-queues)
-  - [3.12 Scheduler](#312-scheduler)
-    - [Schedulers are special system software which handle process scheduling in various ways. Their main task is to select the jobs to be submitted into the system and to decide which process to run. Schedulers are of three types:](#schedulers-are-special-system-software-which-handle-process-scheduling-in-various-ways-their-main-task-is-to-select-the-jobs-to-be-submitted-into-the-system-and-to-decide-which-process-to-run-schedulers-are-of-three-types)
-    - [Long-term Scheduler](#long-term-scheduler)
-    - [Short-term Scheduler](#short-term-scheduler)
-    - [Medium term Scheduler](#medium-term-scheduler)
-- [Chapter 4: Thread Concepts](#chapter-4-thread-concepts)
-  - [4.1 What is a Thread ?](#41-what-is-a-thread)
-  - [4.2 Benefits of Multi-threading](#42-benefits-of-multi-threading)
-  - [4.3 Example of MultiThreading](#43-example-of-multithreading)
-  - [4.4 Models](#44-models)
-    - [One to One Model](#one-to-one-model)
-    - [Many to One Model](#many-to-one-model)
-    - [Many to Many Model](#many-to-many-model)
-  - [4.5 Thread Library ????](#45-thread-library)
-  - [4.6 Optional number of threads required for a process ???](#46-optional-number-of-threads-required-for-a-process)
-  - [4.7 Effect of Multiple cores on Multithreading ?](#47-effect-of-multiple-cores-on-multithreading)
-  - [4.8 Thread vs Process (Again)](#48-thread-vs-process-again)
-  - [4.9 Why C++ Static Variables are disastrous in real life OS ?](#49-why-cpp-static-variables-are-disastrous-in-real-life-os)
-- [Chapter 5: Process Scheduling](#chapter-5-process-scheduling)
-  - [5.1 Why do we need it ?](#51-why-do-we-need-it)
-  - [5.2 CPU Burst Cycle](#52-cpu-burst-cycle)
-  - [5.3 CPU Scheduler](#53-cpu-scheduler)
-    - [Pre-Emptive Scheduling](#pre-emptive-scheduling)
-    - [Non-PreEmptive Scheduling](#non-preemptive-scheduling)
-  - [5.4 Dispatcher](#54-dispatcher)
-    - [Advantages/Disadvantages](#advantages-disadvantages)
-  - [5.5 Scheduling Criteria](#55-scheduling-criteria)
-    - [Turn Around Time](#turn-around-time)
-    - [Waiting Time](#waiting-time)
-    - [Response Time](#response-time)
-    - [CPU utilization](#cpu-utilization)
-    - [Throughput](#throughput)
-    - [TAT (Turn Around Time)](#tat-turn-around-time)
-  - [5.6 Scheduling Algo](#56-scheduling-algo)
-    - [FCFS](#fcfs)
-    - [SJFS](#sjfs)
-    - [Priority-based](#priority-based)
-    - [Round-Robin](#round-robin)
-    - [SRTFS](#srtfs)
-    - [MLFQS](#mlfqs)
-  - [5.7 Which Algo is used in the real world OS scenario ?](#57-which-algo-is-used-in-the-real-world-os-scenario)
-  - [5.8 IMP terms to know](#58-imp-terms-to-know)
-    - [Convoy Effect](#convoy-effect)
-    - [Aging](#aging)
-  - [5.9 How to prevent Starvation in OS ?](#59-how-to-prevent-starvation-in-os)
-  - [5.10 Why Process Coordination/Synchronization is needed ?](#510-why-process-coordination-synchronization-is-needed)
-  - [5.11 Physical Address Space vs Logical Address Space](#511-physical-address-space-vs-logical-address-space)
-  - [5.12 Imp terms to know](#512-imp-terms-to-know-1)
-    - [Race Condition](#race-condition)
-    - [Data Inconsistency](#data-inconsistency)
-    - [Race Condition](#race-condition-1)
-    - [Critical Section](#critical-section)
-    - [Mutual Exclusion](#mutual-exclusion)
-- [Chapter 6: Process Synchronization](#chapter-6-process-synchronization)
-  - [6.1 Critical Section Problem, peterson Solution](#61-critical-section-problem-peterson-solution)
-    - [Follow youtube Video: [KNOWLEDGE GATE]](#follow-youtube-video-knowledge-gate)
-  - [6.2 Why PreEmptive Kernel is better than Non-PreEmptive Kernel ?](#62-why-preemptive-kernel-is-better-than-non-preemptive-kernel)
-  - [6.3 Semaphore](#63-semaphore)
-    - [Mutex vs Semaphore / Mutex Locks](#mutex-vs-semaphore-mutex-locks)
-    - [Counting Semaphore vs Binary Semaphore](#counting-semaphore-vs-binary-semaphore)
-  - [6.4 Imp terms to Know:](#64-imp-terms-to-know)
-    - [Busy Waiting](#busy-waiting)
-    - [Spin Lock](#spin-lock)
-  - [6.5 Example of Busy Waiting & Spinlock ?](#65-example-of-busy-waiting-and-spinlock)
-  - [6.6 How to implement Binary Semaphore ?](#66-how-to-implement-binary-semaphore)
-  - [6.7 Classical Problem of Synchronization](#67-classical-problem-of-synchronization)
-    - [What is Deadlock & Starvation ?](#what-is-deadlock-and-starvation)
-    - [Bounded Buffer, Reader-Writer Problem & Dining Philosopher Problem](#bounded-buffer-reader-writer-problem-and-dining-philosopher-problem)
-- [Chapter 7: Deadlocks](#chapter-7-deadlocks)
-  - [7.1 What is Deadlock](#71-what-is-deadlock)
-    - [If the operating system has a deadlock prevention or detection system in place, this will have a negative impact on the system's overall performance.](#if-the-operating-system-has-a-deadlock-prevention-or-detection-system-in-place-this-will-have-a-negative-impact-on-the-systems-overall-performance)
-  - [7.2 Effects of DeadLock ?](#72-effects-of-deadlock)
-  - [7.3 Necessary Conditions:](#73-necessary-conditions)
-    - [Mutual Exclusion](#mutual-exclusion-1)
-    - [Hold & Wait](#hold-and-wait)
-    - [No PreEmption](#no-preemption)
-    - [Circular Wait](#circular-wait)
-  - [7.4 Methods for Deadlock Handling](#74-methods-for-deadlock-handling)
-    - [Prevention or Avoidance](#prevention-or-avoidance)
-      - [Make sure atleast one condition should not meet](#make-sure-atleast-one-condition-should-not-meet)
-        - [Mutual Exclusion](#mutual-exclusion-2)
-        - [Hold & Wait](#hold-and-wait-1)
-        - [No PreEmption](#no-preemption-1)
-        - [Circular Wait](#circular-wait-1)
-    - [Detection or Recovery](#detection-or-recovery)
-      - [Banker's Algo](#bankers-algo)
-        - [Safe State](#safe-state)
-        - [Follow Video:[Easy Engineer Ing Classes]](#follow-videoeasy-engineer-ing-classes)
-      - [Ostrich Algo](#ostrich-algo)
-    - [Resource Preemption](#resource-preemption)
-    - [Ignorance](#ignorance)
-- [Chapter 8: Memory-Management Strategies](#chapter-8-memory-management-strategies)
-  - [8.1 Imp Points:](#81-imp-points)
-    - [CPU can directly access Registers and Main Memory](#cpu-can-directly-access-registers-and-main-memory)
-    - [Protection of Memory space is handled by Hardware.](#protection-of-memory-space-is-handled-by-hardware)
-    - [OS needs Base and Limit registers](#os-needs-base-and-limit-registers)
-    - [Mapping from Logical to Physical address is done by MMU(Memory Management Unit)](#mapping-from-logical-to-physical-address-is-done-by-mmumemory-management-unit)
-  - [8.2 OS memory is categorised into 3 divisions:](#82-os-memory-is-categorised-into-3-divisions)
-    - [for the resident of OS](#for-the-resident-of-os)
-    - [User Processes](#user-processes)
-  - [8.3 Logical vs Physical address space](#83-logical-vs-physical-address-space)
-  - [8.4 What is Swapping ?](#84-what-is-swapping)
-    - [Ex- Priority based Scheduling](#ex-priority-based-scheduling)
-    - [Done by Dispatcher](#done-by-dispatcher)
-    - [Context Switch time in swapping is very high](#context-switch-time-in-swapping-is-very-high)
-    - [OS can't swap process that has pending input/output.](#os-cant-swap-process-that-has-pending-input-output)
-  - [8.5 Contiguous Memory Allocation](#85-contiguous-memory-allocation)
-    - [Address Translation: Base and limit register](#address-translation-base-and-limit-register)
-    - [Fixed Partitioning](#fixed-partitioning)
-    - [Variable partitioning](#variable-partitioning)
-    - [Dynamic storage allocation problem](#dynamic-storage-allocation-problem)
-      - [Best Fit](#best-fit)
-      - [Worst Fit](#worst-fit)
-      - [First Fit](#first-fit)
-    - [Internal Fragmentation](#internal-fragmentation)
-    - [External Fragmentation](#external-fragmentation)
-      - [Remedies:](#remedies)
-        - [Compaction](#compaction)
-        - [Non-Contiguous Allocation](#non-contiguous-allocation)
-          - [Paging](#paging)
-          - [Segmentation](#segmentation)
-  - [8.6 Paging](#86-paging-1)
-    - [Page table](#page-table)
-    - [page No.](#page-no)
-    - [page Offset](#page-offset)
-    - [Page table base register, PTLR](#page-table-base-register-ptlr)
-  - [8.7 Segmentation](#87-segmentation-1)
-    - [Segment table](#segment-table)
-    - [Limit register](#limit-register)
-  - [8.8 Imp Topic to Cover:](#88-imp-topic-to-cover)
-    - [Follow KNOWLEDGE GATE Video](#follow-knowledge-gate-video)
-    - [Memory Allocation](#memory-allocation)
-- [Chapter 9: Virtual-Memory Mgmt](#chapter-9-virtual-memory-mgmt)
-  - [9.1 Goal of mem. Mgmt](#91-goal-of-mem-mgmt)
-    - [To keep multiple processes in memory to allow multiProgramming.](#to-keep-multiple-processes-in-memory-to-allow-multiprogramming)
-  - [9.2 Virtual Memory](#92-virtual-memory)
-    - [What ?](#what)
-    - [Why ?](#why)
-    - [Where is it physically located ?](#where-is-it-physically-located)
-    - [How it is implemented ?](#how-it-is-implemented)
-      - [Demand Paging](#demand-paging)
-        - [Strategy to only load pages when they are needed](#strategy-to-only-load-pages-when-they-are-needed)
-        - [Paging + Swapping](#paging-swapping)
-      - [user can write program for an extremely large virtual address space](#user-can-write-program-for-an-extremely-large-virtual-address-space)
-    - [Advantages/benefits](#advantages-benefits)
-      - [CPU Utilization & Throughput] increases && [Response time and TurnAroundTime] decreases](#cpu-utilization-and-throughput-increases-andand-response-time-and-turnaroundtime-decreases)
-      - [Less I/O would be needed to load or swap user programs into memory, so each user program would run faster.](#less-i-o-would-be-needed-to-load-or-swap-user-programs-into-memory-so-each-user-program-would-run-faster)
-      - [Degree of Multiprogramming increases](#degree-of-multiprogramming-increases)
-      - [Less memory is needed, so can be shared by 2 or more processes through page sharing](#less-memory-is-needed-so-can-be-shared-by-2-or-more-processes-through-page-sharing)
-    - [If it is used carelessly, it can decrease performance.](#if-it-is-used-carelessly-it-can-decrease-performance)
-  - [9.3 Demand Paging](#93-demand-paging-1)
-    - [paging + swapping](#paging-swapping-1)
-    - [Lazy Swapper](#lazy-swapper)
-    - [pager](#pager)
-    - [page fault](#page-fault)
-      - [access to a page that is not in memory](#access-to-a-page-that-is-not-in-memory)
-  - [9.4 Pure Demand paging](#94-pure-demand-paging)
-  - [9.5 Swap Space:](#95-swap-space)
-    - [Section of hard disk used for implementing Virtual Mem. is swap space](#section-of-hard-disk-used-for-implementing-virtual-mem-is-swap-space)
-  - [9.6 What is Page Fault ?](#96-what-is-page-fault)
-  - [9.7 Page Replacement Algo:](#97-page-replacement-algo)
-    - [FIFO](#fifo)
-      - [belady's anomaly](#beladys-anomaly)
-    - [Optimal Page Replacement](#optimal-page-replacement)
-    - [LRU](#lru)
-  - [9.8 What is Frame rate ?](#98-what-is-frame-rate)
-  - [9.9 Thrashing](#99-thrashing)
-    - [What ?](#what-1)
-      - [Low CPU Utilization -> Degree of Multiprogramming increases -> More Page Fault -> Cycle Continues -> CPU Utilization decreases sharply.](#low-cpu-utilization-degree-of-multiprogramming-increases-more-page-fault-cycle-continues-cpu-utilization-decreases-sharply)
-    - [Cause of Thrashing ?](#cause-of-thrashing)
-    - [Solution to thrashing ?](#solution-to-thrashing)
-      - [use Priority based Replacement Algo](#use-priority-based-replacement-algo)
-      - [Allocate the exact no. of frames that are actually required](#allocate-the-exact-no-of-frames-that-are-actually-required)
-  - [9.10 [Most asked Question] Thrashing](#910-most-asked-question-thrashing)
-  - [9.11 Can we replace Physical memory i.e. RAM with Virtual memory ? [KNOWLEDGEWORK]](#911-can-we-replace-physical-memory-ie-ram-with-virtual-memory-knowledgework)
-  - [9.12 How to check performance of Virtual memory ? [KNOWLEDGEWORK]](#912-how-to-check-performance-of-virtual-memory-knowledgework)
-- [Chapter 10: Storage Management](#chapter-10-storage-management)
-  - [10.1 Optimal](#101-optimal)
-  - [10.2 SSD](#102-ssd)
-  - [10.3 Disk Scheduling](#103-disk-scheduling)
-  - [10.4 File Systems](#104-file-systems)
-  - [10.5 File system mounting](#105-file-system-mounting)
-  - [10.6 Directory Structure](#106-directory-structure)
-  - [10.7 File Allocation Methods](#107-file-allocation-methods)
-  - [10.8 Free Space Management](#108-free-space-management)
-- [Chapter 11: For College Exam](#chapter-11-for-college-exam)
-  - [11.1 Imp Questions for viva/Placement](#111-imp-questions-for-viva-placement)
-  - [11.2 Imp Questions for Semester exam](#112-imp-questions-for-semester-exam)
+- 📖 **[Chapter 1: Quick Notes to Follower](#chapter-1-quick-notes-to-follower)**
+- 📋 **[Chapter 2: Overview](#chapter-2-overview)**
+  - ❓ **[2.1 What Is an Operating System?](#21-what-is-an-operating-system)**
+  - ⚙️ **[2.2 Services Provided by an Operating System](#22-services-provided-by-an-operating-system)**
+  - 🖥️ **[2.3 Types of OS](#23-types-of-os)**
+    - 📦 **[Batched OS](#batched-os)**
+    - ⏱️ **[Time-Sharing OS](#time-sharing-os)**
+    - 🌐 **[Distributed OS](#distributed-os)**
+    - 🖧 **[Network OS](#network-os)**
+    - ⏲️ **[Real-Time OS](#real-time-os)**
+  - 🔄 **[2.4 RAM vs. ROM](#24-ram-vs-rom)**
+  - ⚡ **[2.5 SRAM vs. DRAM](#25-sram-vs-dram)**
+  - 💾 **[2.6 PROM, EPROM & EEPROM](#26-prom-eprom-and-eeprom)**
+  - 🐳 **[2.7 Virtualization vs. Containerization](#27-virtualization-vs-containerization)**
+  - 🛡️ **[2.8 BIOS vs. UEFI](#28-bios-vs-uefi)**
+  - 💿 **[2.9 MBR vs. GPT](#29-mbr-vs-gpt)**
+  - 📚 **[2.10 Important Terms to Know](#210-important-terms-to-know)**
+    - 📝 **[Compiler](#compiler)**
+    - 📥 **[Loader](#loader)**
+    - 🔣 **[Assembler](#assembler)**
+    - 🤖 **[Interpreter](#interpreter)**
+    - 🎯 **[System Calls](#system-calls)**
+    - 🔗 **[Application Programming Interface (API)**](#application-programming-interface)**
+    - 🧩 **[Kernel](#kernel)**
+    - 🐚 **[Shell](#shell)**
+    - ☕ **[JVM](#jvm)**
+    - 🚀 **[Booting](#booting)**
+  - 🔀 **[2.11 Multiprogramming, Multiprocessing, Multitasking & Multithreading (Software)**](#211-multiprogramming-multiprocessing-multitasking-and-multithreading-software)**
+  - 🏛️ **[2.12 Monolithic Architecture vs. Microkernel](#212-monolithic-architecture-vs-microkernel)**
+  - ❓ **[2.13 Why Is the Windows Kernel More Monolithic & Not Microkernel?](#213-why-windows-kernel-is-more-monolithic-and-not-microkernel)**
+  - 🔌 **[2.14 What Happens When We Turn On Our Computer?](#214-what-happens-when-we-turn-on-our-computer)**
 
-# Let's Start Reading...
+- 🏃 **[Chapter 3: Process Concept](#chapter-3-process-concept)**
+  - 📄 **[3.1 Process vs. Program](#31-process-vs-program)**
+  - 🔄 **[3.2 Different States of a Process](#32-different-state-of-process)**
+  - 🧩 **[3.3 Types of Process](#33-types-of-process)**
+    - ⚙️ **[CPU-Bound Process vs. I/O-Bound Process](#cpu-bound-process-vs-i-o-bound-process)**
+  - 📂 **[3.4 PCB Structure in Detail](#34-pcb-structure-in-detail)**
+  - 🆕 **[3.5 How Does a Process Get Created in Memory?](#35-how-does-a-process-gets-created-in-memory)**
+  - 🧵 **[3.6 Process vs. Threads](#36-process-vs-threads)**
+  - 🔄 **[3.7 Context Switching](#37-context-switching)**
+    - ❓ **[What Is a Context Switch?](#what-is-a-context-switch)**
+    - 📖 **[Introduction](#introduction)**
+  - 🔗 **[3.8 IPC](#38-ipc)**
+    - 🗄️ **[By Shared Memory](#by-shared-memory)**
+    - 💬 **[By Message Passing](#by-message-passing)**
+  - 👶 **[3.9 Orphan Process](#39-orphan-process)**
+  - 💀 **[3.10 Zombie Process](#310-zombie-process)**
+    - ❓ **[Maximum Number of Zombie Processes a System Can Have?](#maximum-number-of-zombie-processes-a-system-can-have)**
+  - 🎛️ **[3.11 Scheduling Queues](#311-scheduling-queues)**
+    - 📖 **[Introduction](#introduction-1)**
+    - 🗂️ **[Job Queue](#job-queue)**
+    - ▶️ **[Ready Queue](#ready-queue)**
+    - 🖥️ **[Device Queues](#device-queues)**
+  - 🏷️ **[3.12 Scheduler](#312-scheduler)**
+    - 🔍 **[Schedulers Overview](#schedulers-are-special-system-software-which-handle-process-scheduling-in-various-ways-their-main-task-is-to-select-the-jobs-to-be-submitted-into-the-system-and-to-decide-which-process-to-run-schedulers-are-of-three-types)**
+    - ⏳ **[Long-term Scheduler](#long-term-scheduler)**
+    - ⚡ **[Short-term Scheduler](#short-term-scheduler)**
+    - 💤 **[Medium-term Scheduler](#medium-term-scheduler)**
 
-Okay, I will deconstruct the provided 'Input Content Piece' and elaborate on each identified sub-part, adhering to your specified guidelines. Each section aims to be a concise yet well-detailed explanation, suitable for a comprehensive guide.
+- 🧵 **[Chapter 4: Thread Concepts](#chapter-4-thread-concepts)**
+  - ❓ **[4.1 What Is a Thread?](#41-what-is-a-thread)**
+  - 🚀 **[4.2 Benefits of Multi-threading](#42-benefits-of-multi-threading)**
+  - 💡 **[4.3 Example of MultiThreading](#43-example-of-multithreading)**
+  - 🔄 **[4.4 Models](#44-models)**
+    - 1️⃣ **[One-to-One Model](#one-to-one-model)**
+    - 🔗 **[Many-to-One Model](#many-to-one-model)**
+    - ➰ **[Many-to-Many Model](#many-to-many-model)**
+  - 📚 **[4.5 Thread Library](#45-thread-library)**
+  - ❓ **[4.6 Optional Number of Threads Required for a Process?](#46-optional-number-of-threads-required-for-a-process)**
+  - 💻 **[4.7 Effect of Multiple Cores on Multithreading?](#47-effect-of-multiple-cores-on-multithreading)**
+  - 🔁 **[4.8 Thread vs. Process (Again)**](#48-thread-vs-process-again)**
+  - ⚠️ **[4.9 Why Are C++ Static Variables Disastrous in Real-Life OS?](#49-why-cpp-static-variables-are-disastrous-in-real-life-os)**
+
+- 🗓️ **[Chapter 5: Process Scheduling](#chapter-5-process-scheduling)**
+  - ❓ **[5.1 Why Do We Need It?](#51-why-do-we-need-it)**
+  - 🔄 **[5.2 CPU Burst Cycle](#52-cpu-burst-cycle)**
+  - 🖥️ **[5.3 CPU Scheduler](#53-cpu-scheduler)**
+    - ⏳ **[Preemptive Scheduling](#pre-emptive-scheduling)**
+    - 🚫 **[Non-Preemptive Scheduling](#non-preemptive-scheduling)**
+  - 🚚 **[5.4 Dispatcher](#54-dispatcher)**
+    - ✔️❌ **[Advantages/Disadvantages](#advantages-disadvantages)**
+  - 📊 **[5.5 Scheduling Criteria](#55-scheduling-criteria)**
+    - ⏱️ **[Turnaround Time](#turn-around-time)**
+    - ⏳ **[Waiting Time](#waiting-time)**
+    - ⚡ **[Response Time](#response-time)**
+    - 🔄 **[CPU Utilization](#cpu-utilization)**
+    - 📈 **[Throughput](#throughput)**
+    - 🔁 **[TAT (Turnaround Time)**](#tat-turn-around-time)**
+  - 📐 **[5.6 Scheduling Algorithms](#56-scheduling-algo)**
+    - 🅵 **[FCFS](#fcfs)**
+    - 🆂 **[SJFS](#sjfs)**
+    - ⭐ **[Priority-Based](#priority-based)**
+    - 🔄 **[Round-Robin](#round-robin)**
+    - ⏱️ **[SRTFS](#srtfs)**
+    - 📊 **[MLFQS](#mlfqs)**
+  - 🌎 **[5.7 Real-World OS Scheduling Algorithms](#57-which-algo-is-used-in-the-real-world-os-scenario)**
+  - 🗝️ **[5.8 Important Terms to Know](#58-imp-terms-to-know)**
+    - 🚗 **[Convoy Effect](#convoy-effect)**
+    - 🕰️ **[Aging](#aging)**
+  - ⚔️ **[5.9 How to Prevent Starvation in OS?](#59-how-to-prevent-starvation-in-os)**
+  - 🤝 **[5.10 Why Is Process Coordination/Synchronization Needed?](#510-why-process-coordination-synchronization-is-needed)**
+  - 🗺️ **[5.11 Physical vs. Logical Address Space](#511-physical-address-space-vs-logical-address-space)**
+  - 📝 **[5.12 Important Terms to Know](#512-imp-terms-to-know-1)**
+    - ⚠️ **[Race Condition](#race-condition)**
+    - 🔄 **[Data Inconsistency](#data-inconsistency)**
+    - 🚧 **[Critical Section](#critical-section)**
+    - 🔒 **[Mutual Exclusion](#mutual-exclusion)**
+
+- 🔒 **[Chapter 6: Process Synchronization](#chapter-6-process-synchronization)**
+  - 🚧 **[6.1 Critical Section Problem, Peterson’s Solution](#61-critical-section-problem-peterson-solution)**
+    - ▶️ **[Follow YouTube Video: KNOWLEDGE GATE](#follow-youtube-video-knowledge-gate)**
+  - 🔄 **[6.2 Why Is a Preemptive Kernel Better Than a Non-Preemptive Kernel?](#62-why-preemptive-kernel-is-better-than-non-preemptive-kernel)**
+  - 🔐 **[6.3 Semaphore](#63-semaphore)**
+    - 🆚 **[Mutex vs. Semaphore / Mutex Locks](#mutex-vs-semaphore-mutex-locks)**
+    - 🔢 **[Counting Semaphore vs. Binary Semaphore](#counting-semaphore-vs-binary-semaphore)**
+  - 📚 **[6.4 Important Terms to Know](#64-imp-terms-to-know)**
+    - ⏳ **[Busy Waiting](#busy-waiting)**
+    - 🔄 **[Spin Lock](#spin-lock)**
+  - 💡 **[6.5 Example of Busy Waiting & Spinlock](#65-example-of-busy-waiting-and-spinlock)**
+  - 🔧 **[6.6 How to Implement a Binary Semaphore?](#66-how-to-implement-binary-semaphore)**
+  - 🧐 **[6.7 Classical Problems of Synchronization](#67-classical-problem-of-synchronization)**
+    - ☠️ **[What Are Deadlock & Starvation?](#what-is-deadlock-and-starvation)**
+    - 🍽️ **[Bounded Buffer, Reader–Writer & Dining Philosophers](#bounded-buffer-reader-writer-problem-and-dining-philosopher-problem)**
+
+- ☠️ **[Chapter 7: Deadlocks](#chapter-7-deadlocks)**
+  - ❓ **[7.1 What Is Deadlock?](#71-what-is-deadlock)**
+    - ⚠️ **[Impact of Deadlock Prevention/Detection on Performance](#if-the-operating-system-has-a-deadlock-prevention-or-detection-system-in-place-this-will-have-a-negative-impact-on-the-systems-overall-performance)**
+  - 💥 **[7.2 Effects of Deadlock](#72-effects-of-deadlock)**
+  - 📋 **[7.3 Necessary Conditions](#73-necessary-conditions)**
+    - 🔒 **[Mutual Exclusion](#mutual-exclusion-1)**
+    - 🤝 **[Hold & Wait](#hold-and-wait)**
+    - 🚫 **[No Preemption](#no-preemption)**
+    - 🔄 **[Circular Wait](#circular-wait)**
+  - 🛠️ **[7.4 Methods for Deadlock Handling](#74-methods-for-deadlock-handling)**
+    - 🛡️ **[Prevention or Avoidance](#prevention-or-avoidance)**
+      - ✅ **[Make Sure at Least One Condition Is Not Met](#make-sure-atleast-one-condition-should-not-meet)**
+        - 🔒 **[Mutual Exclusion](#mutual-exclusion-2)**
+        - 🤝 **[Hold & Wait](#hold-and-wait-1)**
+        - 🚫 **[No Preemption](#no-preemption-1)**
+        - 🔄 **[Circular Wait](#circular-wait-1)**
+    - 🔍 **[Detection or Recovery](#detection-or-recovery)**
+      - 💰 **[Banker’s Algorithm](#bankers-algo)**
+        - 🛡️ **[Safe State](#safe-state)**
+        - ▶️ **[Follow Video: Easy Engineering Classes](#follow-videoeasy-engineer-ing-classes)**
+      - 🦩 **[Ostrich Algorithm](#ostrich-algo)**
+    - 🔄 **[Resource Preemption](#resource-preemption)**
+    - 🙈 **[Ignorance](#ignorance)**
+
+- 🗄️ **[Chapter 8: Memory-Management Strategies](#chapter-8-memory-management-strategies)**
+  - 📌 **[8.1 Key Points](#81-imp-points)**
+    - 🧠 **[CPU Accesses Registers & Main Memory Directly](#cpu-can-directly-access-registers-and-main-memory)**
+    - 🛡️ **[Hardware Protects Memory Space](#protection-of-memory-space-is-handled-by-hardware)**
+    - 🎚️ **[OS Needs Base & Limit Registers](#os-needs-base-and-limit-registers)**
+    - 🔄 **[MMU Maps Logical to Physical Addresses](#mapping-from-logical-to-physical-address-is-done-by-mmumemory-management-unit)**
+  - 🏢 **[8.2 OS Memory Divisions](#82-os-memory-is-categorised-into-3-divisions)**
+    - 🏠 **[Resident of OS](#for-the-resident-of-os)**
+    - 👤 **[User Processes](#user-processes)**
+  - 🗺️ **[8.3 Logical vs. Physical Address Space](#83-logical-vs-physical-address-space)**
+  - 🔄 **[8.4 What Is Swapping?](#84-what-is-swapping)**
+    - 🔄 **[Priority-Based Scheduling Example](#ex-priority-based-scheduling)**
+    - 🚚 **[Handled by Dispatcher](#done-by-dispatcher)**
+    - ⏳ **[High Context-Switch Time](#context-switch-time-in-swapping-is-very-high)**
+    - 🚫 **[Cannot Swap Processes with Pending I/O](#os-cant-swap-process-that-has-pending-input-output)**
+  - 🧩 **[8.5 Contiguous Memory Allocation](#85-contiguous-memory-allocation)**
+    - 🔄 **[Address Translation: Base & Limit Register](#address-translation-base-and-limit-register)**
+    - 🗂️ **[Fixed Partitioning](#fixed-partitioning)**
+    - 🔄 **[Variable Partitioning](#variable-partitioning)**
+    - ❓ **[Dynamic Storage Allocation Problem](#dynamic-storage-allocation-problem)**
+      - 🥇 **[Best Fit](#best-fit)**
+      - 🥈 **[Worst Fit](#worst-fit)**
+      - 🥉 **[First Fit](#first-fit)**
+    - ⚠️ **[Internal Fragmentation](#internal-fragmentation)**
+    - 🌌 **[External Fragmentation](#external-fragmentation)**
+      - 🛠️ **[Remedies:](#remedies)**
+        - 🔄 **[Compaction](#compaction)**
+        - 🌐 **[Non-Contiguous Allocation](#non-contiguous-allocation)**
+          - 📄 **[Paging](#paging)**
+          - 📚 **[Segmentation](#segmentation)**
+  - 📑 **[8.6 Paging](#86-paging-1)**
+    - 📋 **[Page Table](#page-table)**
+    - 🔢 **[Page Number](#page-no)**
+    - ⚙️ **[Page Offset](#page-offset)**
+    - 📍 **[Page Table Base Register (PTBR)**](#page-table-base-register-ptlr)**
+  - 📑 **[8.7 Segmentation](#87-segmentation-1)**
+    - 📋 **[Segment Table](#segment-table)**
+    - 🎚️ **[Limit Register](#limit-register)**
+  - 📌 **[8.8 Topics to Cover](#88-imp-topic-to-cover)**
+    - ▶️ **[Follow Knowledge Gate Video](#follow-knowledge-gate-video)**
+    - 🗄️ **[Memory Allocation](#memory-allocation)**
+
+- 🌐 **[Chapter 9: Virtual-Memory Management](#chapter-9-virtual-memory-mgmt)**
+  - 🎯 **[9.1 Goal of Memory Management](#91-goal-of-mem-mgmt)**
+    - 🔄 **[Keep Multiple Processes in Memory for Multiprogramming](#to-keep-multiple-processes-in-memory-to-allow-multiprogramming)**
+  - 💭 **[9.2 Virtual Memory](#92-virtual-memory)**
+    - ❓ **[What?](#what)**
+    - ❓ **[Why?](#why)**
+    - 📍 **[Where Physically Located?](#where-is-it-physically-located)**
+    - 🔧 **[How Implemented?](#how-it-is-implemented)**
+      - 📥 **[Demand Paging](#demand-paging)**
+        - ✅ **[Load Pages Only When Needed](#strategy-to-only-load-pages-when-they-are-needed)**
+        - 🔄 **[Paging + Swapping](#paging-swapping)**
+      - 💻 **[Large Virtual Address Space Capability](#user-can-write-program-for-an-extremely-large-virtual-address-space)**
+    - ✅ **[Advantages/Benefits](#advantages-benefits)**
+      - 📈 **[↑ CPU Utilization & Throughput; ↓ Response & Turnaround Times](#cpu-utilization-and-throughput-increases-andand-response-time-and-turnaroundtime-decreases)**
+      - ⚡ **[Less I/O Needed → Faster Programs](#less-i-o-would-be-needed-to-load-or-swap-user-programs-into-memory-so-each-user-program-would-run-faster)**
+      - 🔄 **[↑ Degree of Multiprogramming](#degree-of-multiprogramming-increases)**
+      - 🤝 **[Page Sharing Between Processes](#less-memory-is-needed-so-can-be-shared-by-2-or-more-processes-through-page-sharing)**
+    - ⚠️ **[Careless Use Can Decrease Performance](#if-it-is-used-carelessly-it-can-decrease-performance)**
+  - 🔍 **[9.3 Demand Paging](#93-demand-paging-1)**
+    - 🔄 **[Paging + Swapping](#paging-swapping-1)**
+    - 😴 **[Lazy Swapper](#lazy-swapper)**
+    - 📜 **[Pager](#pager)**
+    - 🚨 **[Page Fault](#page-fault)**
+      - ❓ **[Access to a Page Not in Memory](#access-to-a-page-that-is-not-in-memory)**
+  - 🆓 **[9.4 Pure Demand Paging](#94-pure-demand-paging)**
+  - 🗄️ **[9.5 Swap Space](#95-swap-space)**
+    - 💽 **[Disk Section Used for Virtual Memory](#section-of-hard-disk-used-for-implementing-virtual-mem-is-swap-space)**
+  - 🚨 **[9.6 What Is a Page Fault?](#96-what-is-page-fault)**
+  - 📝 **[9.7 Page Replacement Algorithms](#97-page-replacement-algo)**
+    - 🚶 **[FIFO](#fifo)**
+      - ⚠️ **[Belady’s Anomaly](#beladys-anomaly)**
+    - 🎯 **[Optimal Page Replacement](#optimal-page-replacement)**
+    - 🕰️ **[LRU](#lru)**
+  - 🎞️ **[9.8 What Is Frame Rate?](#98-what-is-frame-rate)**
+  - 🌪️ **[9.9 Thrashing](#99-thrashing)**
+    - ❓ **[What?](#what-1)**
+      - 🔄 **[Low CPU Utilization → More Page Faults → Cycle → Sharp ↓ Utilization](#low-cpu-utilization-degree-of-multiprogramming-increases-more-page-fault-cycle-continues-cpu-utilization-decreases-sharply)**
+    - ⚠️ **[Causes of Thrashing](#cause-of-thrashing)**
+    - 🛠️ **[Solutions to Thrashing](#solution-to-thrashing)**
+      - ⭐ **[Priority-Based Replacement](#use-priority-based-replacement-algo)**
+      - 🎯 **[Allocate Exact Number of Required Frames](#allocate-the-exact-no-of-frames-that-are-actually-required)**
+  - ❓ **[9.10 [Most Asked Question] Thrashing](#910-most-asked-question-thrashing)**
+  - ❓ **[9.11 Can We Replace RAM with Virtual Memory? [KnowledgeWork]](#911-can-we-replace-physical-memory-ie-ram-with-virtual-memory-knowledgework)**
+  - 📊 **[9.12 How to Check Virtual Memory Performance? [KnowledgeWork]](#912-how-to-check-performance-of-virtual-memory-knowledgework)**
+
+- 💾 **[Chapter 10: Storage Management](#chapter-10-storage-management)**
+  - 🎯 **[10.1 Optimal](#101-optimal)**
+  - ⚡ **[10.2 SSD](#102-ssd)**
+  - 🎛️ **[10.3 Disk Scheduling](#103-disk-scheduling)**
+  - 📁 **[10.4 File Systems](#104-file-systems)**
+  - 📌 **[10.5 File System Mounting](#105-file-system-mounting)**
+  - 🌲 **[10.6 Directory Structure](#106-directory-structure)**
+  - 📂 **[10.7 File Allocation Methods](#107-file-allocation-methods)**
+  - 🆓 **[10.8 Free Space Management](#108-free-space-management)**
+
+- 🏆 **[Chapter 11: For College Exam](#chapter-11-for-college-exam)**
+  - 🎤 **[11.1 Important Questions for Viva/Placement](#111-imp-questions-for-viva-placement)**
+  - 📝 **[11.2 Important Questions for Semester Exam](#112-imp-questions-for-semester-exam)**
+
 
 ---
 

@@ -38,3 +38,7 @@ Treat the 'Input Content Piece' as a self-contained unit that needs this detaile
 ```
 [YOUR CONTENT PIECE HERE - This is where you will paste the text you want the AI to break down and explain. For example, this could be a paragraph from your draft about a specific memory technique, or a collection of your notes on a concept.]
 ```
+
+
+
+

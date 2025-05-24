@@ -103,7 +103,7 @@
   * 🔄 [11.7 Transitive](#117-transitive)  
   * 📏 [11.8 What is Normalisation](#118-what-is-normalisation)  
   * 🎯 [11.9 Purpose of Normalisation](#119-purpose-of-normalisation)  
-  * ❓ [11.10 What are 3 anomalies resolved by normalisation]  (#1110-what-are-3-anomalies-resolved-by-normalisation)  
+  * ❓ [11.10 What are 3 anomalies resolved by normalisation](#1110-what-are-3-anomalies-resolved-by-normalisation)  
   * 🗂️ [11.11 Types of Normalisation](#1111-types-of-normalisation)  
   * 1️⃣ [11.12 1NF Purpose and Steps to convert](#1112-1nf-purpose-and-steps-to-convert)  
   * 2️⃣ [11.13 2NF Purpose and Steps to convert](#1113-2nf-purpose-and-steps-to-convert)  

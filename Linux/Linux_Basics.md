@@ -607,3 +607,12 @@ for ((i = 0; i < TIMES; i++)); do
   sudo git push origin main
 done
 ```
+
+
+running cloudrun - gcloud artifacts repositories create frontend-dev \
+  --repository-format=docker \
+  --location=us-central1 \
+  --description="Docker repo for frontend Cloud Run deployment"
+
+
+az billing account list
